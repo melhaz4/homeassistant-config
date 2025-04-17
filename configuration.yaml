@@ -10,6 +10,9 @@ automation: !include automations.yaml
 script: !include scripts.yaml
 scene: !include scenes.yaml
 
+shell_command:
+  update_and_restart_ha: "/bin/bash /home/melanie/homeassistant/config/scripts/update_and_restart.sh"
+
 template:
   - sensor: !include area_device_count_sensors.yaml
 

@@ -1,5 +1,5 @@
 #!/bin/bash
-cd /config || exit 1
+cd /home/melanie/homeassistant/config || exit 1
 echo "[HA Git] Pulling latest config..."
 git pull origin main || exit 1
 

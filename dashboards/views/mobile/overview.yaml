@@ -6,9 +6,9 @@ max_columns: 1
 sections:
   - !include sections/title_and_chips.yaml
   - !include sections/rooms_and_lights.yaml
-  - !include sections/popups_main.yaml
-  - !include sections/popups_climate1.yaml
-  - !include sections/popups_climate2.yaml
-  - !include sections/popups_climate3.yaml
-  - !include sections/popups_living.yaml
-  - !include sections/popups_office.yaml
+  - !include sections/popup_main.yaml
+  - !include sections/popup_climate1.yaml
+  - !include sections/popup_climate2.yaml
+  - !include sections/popup_climate3.yaml
+  - !include sections/popup_living.yaml
+  - !include sections/popup_office.yaml

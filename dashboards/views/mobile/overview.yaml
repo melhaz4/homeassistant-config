@@ -79,15 +79,15 @@ sections:
         scrolling_effect: false
 
   # POPUP CLIMATE
-  - !include views/mobile/sections/popups_climate1.yaml
-  - !include views/mobile/sections/popups_climate2.yaml
-  - !include views/mobile/sections/popups_climate3.yaml
+  - !include sections/popups_climate1.yaml
+  - !include sections/popups_climate2.yaml
+  - !include sections/popups_climate3.yaml
 
   # POPUP LIVING
-  - !include views/mobile/sections/popups_living.yaml
+  - !include sections/popups_living.yaml
 
   # POPUP MAIN
-  - !include views/mobile/sections/popups_main.yaml
+  - !include sections/popups_main.yaml
 
   # POPUP OFFICE
-  - !include views/mobile/sections/popups_office.yaml
+  - !include sections/popups_office.yaml

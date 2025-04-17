@@ -10,3 +10,4 @@ __pycache__/
 .storage/
 *.log
 secrets.yaml  # If you're not using encrypted secrets
+.vscode/

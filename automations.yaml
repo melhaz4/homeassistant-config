@@ -1,1 +1,6 @@
-[]
+- alias: Webhook - Pull Git Repo and Restart Home Assistant
+  trigger:
+    - platform: webhook
+      webhook_id: update_homeassistant
+  action:
+    - service: shell_command.update_and_restart_ha

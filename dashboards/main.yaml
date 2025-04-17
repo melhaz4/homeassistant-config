@@ -1,6 +1,0 @@
-title: Main
-kiosk_mode:
-  mobile_settings:
-    hide_header: true
-views:
-  - !include views/home.yaml

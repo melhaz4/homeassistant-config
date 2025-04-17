@@ -1,0 +1,42 @@
+title: Starter Dashboard
+views:
+  - title: Overview
+    path: overview
+    icon: mdi:view-dashboard
+    type: sections
+    max_columns: 1
+    sections:
+      - type: grid
+        cards:
+          - type: custom:mushroom-title-card
+            title: Welcome Home
+          - type: custom:mushroom-chips-card
+            chips:
+              - type: entity
+                entity: person.melanie
+              - type: weather
+                entity: weather.forecast_home
+                show_conditions: true
+                show_temperature: true
+              - type: menu
+            alignment: end
+      - type: grid
+        cards:
+          - type: custom:mushroom-template-card
+            entity: light.kitchen
+            primary: Kitchen Light
+            icon: mdi:lightbulb
+            icon_color: amber
+            layout: vertical
+            fill_container: true
+            tap_action:
+              action: toggle
+          - type: custom:mushroom-template-card
+            entity: climate.downstairs
+            primary: Downstairs Thermostat
+            icon: mdi:thermostat
+            icon_color: blue
+            layout: vertical
+            fill_container: true
+            tap_action:
+              action: more-info

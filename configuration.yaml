@@ -13,3 +13,12 @@ scene: !include scenes.yaml
 template:
   - sensor: !include area_device_count_sensors.yaml
 
+lovelace:
+  mode: yaml
+  dashboards:
+    starter-dashboard:
+      mode: yaml
+      title: Starter Dashboard
+      icon: mdi:star
+      show_in_sidebar: true
+      filename: dashboards/starter_dashboard.yaml

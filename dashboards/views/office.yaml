@@ -1,0 +1,43 @@
+title: Office
+path: office
+icon: mdi:desk
+cards:
+  - type: vertical-stack
+    cards:
+      - type: custom:bubble-card
+        card_type: pop-up
+        hash: '#office'
+        button_type: state
+        name: Office
+        force_icon: false
+        show_attribute: false
+        icon: mdi:desk
+        show_header: true
+        entity: switch.office_lamp
+        scrolling_effect: false
+        tap_action:
+          action: toggle
+        button_action:
+          tap_action:
+            action: toggle
+      - square: false
+        type: grid
+        title: Lights
+        columns: 2
+        cards:
+          - type: custom:bubble-card
+            card_type: button
+            entity: switch.office_lamp
+            tap_action:
+              action: toggle
+            icon: mdi:desk-lamp
+            scrolling_effect: false
+          - type: custom:mushroom-empty-card
+      - square: true
+        type: grid
+        title: Devices
+        columns: 2
+        cards:
+          - type: media-control
+            theme: minimalist-desktop
+            entity: media_player.office_atv

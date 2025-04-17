@@ -1,0 +1,74 @@
+title: Home
+path: home
+icon: mdi:home
+type: sections
+header:
+  layout: responsive
+  badges_position: bottom
+max_columns: 2
+sections:
+  - type: grid
+    cards:
+      - type: horizontal-stack
+        cards:
+          - type: custom:mushroom-title-card
+            title: |-
+              {% set time = now().hour %}
+              {% if (time >= 18) %}
+              Good Evening, {{user}}!
+              {% elif (time >= 12) %}
+              Good Afternoon, {{user}}!
+              {% elif (time >= 5) %}
+              Good Morning, {{user}}!
+              {% else %}
+              Hello, {{user}}!
+              {% endif %}
+          - type: custom:mushroom-chips-card
+            chips:
+              - type: weather
+                entity: weather.forecast_home
+                show_conditions: true
+                show_temperature: true
+              - type: menu
+            alignment: end
+        grid_options:
+          columns: 12
+          rows: 2
+      - type: horizontal-stack
+        cards:
+          - type: custom:mushroom-template-card
+            primary: Lights
+            icon: mdi:light-switch
+            icon_color: amber
+            secondary: ''
+            layout: vertical
+            fill_container: true
+            multiline_secondary: true
+            tap_action:
+              action: navigate
+              navigation_path: '#lights'
+          - type: custom:mushroom-template-card
+            primary: Network
+            icon: mdi:wifi
+            secondary: ''
+            badge_color: ''
+            badge_icon: ''
+            icon_color: blue
+            fill_container: true
+            multiline_secondary: true
+            layout: vertical
+            tap_action:
+              action: navigate
+              navigation_path: '#network'
+          - type: custom:mushroom-template-card
+            primary: Car
+            icon: mdi:car
+            icon_color: purple
+            secondary: ''
+            layout: vertical
+            fill_container: true
+            multiline_secondary: true
+            tap_action:
+              action: navigate
+              navigation_path: '#car'
+

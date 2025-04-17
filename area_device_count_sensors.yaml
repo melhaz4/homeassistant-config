@@ -1,0 +1,167 @@
+- name: Kitchen Device Count
+  unique_id: kitchen_device_count
+  state: >
+    {% set area = 'Kitchen' %}
+    {% set devices = namespace(ids=[]) %}
+    {% for entity_id in area_entities(area) %}
+      {% set device = device_id(entity_id) %}
+      {% if device not in devices.ids %}
+        {% set devices.ids = devices.ids + [device] %}
+      {% endif %}
+    {% endfor %}
+    {{ devices.ids | count }}
+
+- name: Kitchen On Device Count
+  unique_id: kitchen_on_device_count
+  state: >
+    {% set area = 'Kitchen' %}
+    {% set devices = namespace(ids=[]) %}
+    {% for entity_id in area_entities(area) %}
+      {% if is_state(entity_id, 'on') %}
+        {% set device = device_id(entity_id) %}
+        {% if device not in devices.ids %}
+          {% set devices.ids = devices.ids + [device] %}
+        {% endif %}
+      {% endif %}
+    {% endfor %}
+    {{ devices.ids | count }}
+
+- name: Guest Bedroom Device Count
+  unique_id: guest_bedroom_device_count
+  state: >
+    {% set area = 'Guest Bedroom' %}
+    {% set devices = namespace(ids=[]) %}
+    {% for entity_id in area_entities(area) %}
+      {% set device = device_id(entity_id) %}
+      {% if device not in devices.ids %}
+        {% set devices.ids = devices.ids + [device] %}
+      {% endif %}
+    {% endfor %}
+    {{ devices.ids | count }}
+
+- name: Guest On Device Count
+  unique_id: guest_on_device_count
+  state: >
+    {% set area = 'Guest' %}
+    {% set devices = namespace(ids=[]) %}
+    {% for entity_id in area_entities(area) %}
+      {% if is_state(entity_id, 'on') %}
+        {% set device = device_id(entity_id) %}
+        {% if device not in devices.ids %}
+          {% set devices.ids = devices.ids + [device] %}
+        {% endif %}
+      {% endif %}
+    {% endfor %}
+    {{ devices.ids | count }}
+
+- name: Living Room Device Count
+  unique_id: living_room_device_count
+  state: >
+    {% set area = 'Living Room' %}
+    {% set devices = namespace(ids=[]) %}
+    {% for entity_id in area_entities(area) %}
+      {% set device = device_id(entity_id) %}
+      {% if device not in devices.ids %}
+        {% set devices.ids = devices.ids + [device] %}
+      {% endif %}
+    {% endfor %}
+    {{ devices.ids | count }}
+
+- name: Living Room On Device Count
+  unique_id: living_room_on_device_count
+  state: >
+    {% set area = 'Living Room' %}
+    {% set devices = namespace(ids=[]) %}
+    {% for entity_id in area_entities(area) %}
+      {% if is_state(entity_id, 'on') %}
+        {% set device = device_id(entity_id) %}
+        {% if device not in devices.ids %}
+          {% set devices.ids = devices.ids + [device] %}
+        {% endif %}
+      {% endif %}
+    {% endfor %}
+    {{ devices.ids | count }}
+
+- name: Main Bedroom Device Count
+  unique_id: main_bedroom_device_count
+  state: >
+    {% set area = 'Main Bedroom' %}
+    {% set devices = namespace(ids=[]) %}
+    {% for entity_id in area_entities(area) %}
+      {% set device = device_id(entity_id) %}
+      {% if device not in devices.ids %}
+        {% set devices.ids = devices.ids + [device] %}
+      {% endif %}
+    {% endfor %}
+    {{ devices.ids | count }}
+
+- name: Main Bedroom On Device Count
+  unique_id: main_bedroom_on_device_count
+  state: >
+    {% set area = 'Main Bedroom' %}
+    {% set devices = namespace(ids=[]) %}
+    {% for entity_id in area_entities(area) %}
+      {% if is_state(entity_id, 'on') %}
+        {% set device = device_id(entity_id) %}
+        {% if device not in devices.ids %}
+          {% set devices.ids = devices.ids + [device] %}
+        {% endif %}
+      {% endif %}
+    {% endfor %}
+    {{ devices.ids | count }}
+
+- name: Office Device Count
+  unique_id: office_device_count
+  state: >
+    {% set area = 'Office' %}
+    {% set devices = namespace(ids=[]) %}
+    {% for entity_id in area_entities(area) %}
+      {% set device = device_id(entity_id) %}
+      {% if device not in devices.ids %}
+        {% set devices.ids = devices.ids + [device] %}
+      {% endif %}
+    {% endfor %}
+    {{ devices.ids | count }}
+
+- name: Office On Device Count
+  unique_id: office_on_device_count
+  state: >
+    {% set area = 'Office' %}
+    {% set devices = namespace(ids=[]) %}
+    {% for entity_id in area_entities(area) %}
+      {% if is_state(entity_id, 'on') %}
+        {% set device = device_id(entity_id) %}
+        {% if device not in devices.ids %}
+          {% set devices.ids = devices.ids + [device] %}
+        {% endif %}
+      {% endif %}
+    {% endfor %}
+    {{ devices.ids | count }}
+
+- name: Outside Device Count
+  unique_id: outside_device_count
+  state: >
+    {% set area = 'Outside' %}
+    {% set devices = namespace(ids=[]) %}
+    {% for entity_id in area_entities(area) %}
+      {% set device = device_id(entity_id) %}
+      {% if device not in devices.ids %}
+        {% set devices.ids = devices.ids + [device] %}
+      {% endif %}
+    {% endfor %}
+    {{ devices.ids | count }}
+
+- name: Outside On Device Count
+  unique_id: outside_on_device_count
+  state: >
+    {% set area = 'Outside' %}
+    {% set devices = namespace(ids=[]) %}
+    {% for entity_id in area_entities(area) %}
+      {% if is_state(entity_id, 'on') %}
+        {% set device = device_id(entity_id) %}
+        {% if device not in devices.ids %}
+          {% set devices.ids = devices.ids + [device] %}
+        {% endif %}
+      {% endif %}
+    {% endfor %}
+    {{ devices.ids | count }}

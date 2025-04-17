@@ -1,0 +1,12 @@
+# Ignore Home Assistant sensitive files
+*.db
+*.db-shm
+*.db-wal
+.homekit/
+cloud/
+tts/
+deps/
+__pycache__/
+.storage/
+*.log
+secrets.yaml  # If you're not using encrypted secrets

@@ -54,9 +54,9 @@ lovelace:
     - url: /hacsfiles/stack-in-card/stack-in-card.js
       type: module
   dashboards:
-    starter-dashboard:
+    mobile-dashboard:
       mode: yaml
       title: Mobile Dashboard
-      icon: mdi:star
+      icon: mdi:cellphone
       show_in_sidebar: true
-      filename: dashboards/starter_dashboard.yaml
+      filename: dashboards/mobile_dashboard.yaml

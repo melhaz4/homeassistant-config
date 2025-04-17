@@ -1,0 +1,54 @@
+- type: vertical-stack
+  cards:
+    - type: custom:bubble-card
+      card_type: pop-up
+      hash: '#living'
+      button_type: state
+      name: Living Room
+      force_icon: false
+      show_attribute: false
+      icon: mdi:sofa
+      show_header: true
+      entity: light.lines_9486
+      tap_action:
+        action: toggle
+      double_tap_action:
+        action: more-info
+      button_action:
+        tap_action:
+          action: toggle
+
+    - square: false
+      type: grid
+      cards:
+        - type: custom:bubble-card
+          card_type: button
+          entity: light.lines_9486
+          button_type: slider
+          icon: mdi:shape
+          slider_live_update: true
+          use_accent_color: true
+          sub_button:
+            - icon: mdi:power
+              tap_action:
+                action: toggle
+              entity: light.lines_9486
+          name: Lines
+          tap_action:
+            action: toggle
+          double_tap_action:
+            action: more-info
+      columns: 2
+      title: Lights
+
+    - square: true
+      type: grid
+      cards:
+        - type: media-control
+          entity: media_player.living_room_atv
+          theme: minimalist-desktop
+        - type: media-control
+          entity: media_player.living_room_sonos
+          theme: minimalist-desktop
+      columns: 2
+      title: Devices

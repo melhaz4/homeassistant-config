@@ -4,7 +4,7 @@ icon: mdi:view-dashboard
 type: sections
 max_columns: 1
 sections:
-  - !include views/mobile/sections/*.yaml
+  - !include sections/*.yaml
   # - !include sections/title_and_chips.yaml
   # - !include sections/rooms_and_lights.yaml
   # - !include sections/popup_main.yaml

@@ -9,7 +9,17 @@ views:
       - type: grid
         cards:
           - type: custom:mushroom-title-card
-            title: Welcome Home
+            title: |-
+              {% set time = now().hour %}
+              {% if (time >= 18) %}
+              Good Evening, {{user}}!
+              {% elif (time >= 12) %}
+              Good Afternoon, {{user}}!
+              {% elif (time >= 5) %}
+              Good Morning, {{user}}!
+              {% else %}
+              Hello, {{user}}!
+              {% endif %}
           - type: custom:mushroom-chips-card
             chips:
               - type: entity
@@ -22,159 +32,45 @@ views:
             alignment: end
       - type: grid
         cards:
-          - type: custom:mushroom-template-card
-            entity: light.kitchen
-            primary: Kitchen Light
-            icon: mdi:lightbulb
-            icon_color: amber
-            layout: vertical
-            fill_container: true
+          - type: custom:bubble-card
+            card_type: separator
+            name: Rooms
+            icon: mdi:view-dashboard
+            card_layout: large
+          - type: custom:bubble-card
+            card_type: button
+            entity: switch.main_room_lights
+            name: Main Bedroom
+            icon: mdi:bed-king-outline
+            show_state: true
+            show_last_changed: false
+            show_attribute: false
+            attribute: entity_id
             tap_action:
               action: toggle
-          - type: custom:mushroom-template-card
-            entity: climate.downstairs
-            primary: Downstairs Thermostat
-            icon: mdi:thermostat
-            icon_color: blue
-            layout: vertical
-            fill_container: true
+            card_layout: large
+            sub_button:
+              - icon: mdi:dots-horizontal
+                tap_action:
+                  action: navigate
+                  navigation_path: '#main'
+            scrolling_effect: false
+          - type: custom:bubble-card
+            card_type: button
+            name: Living Room
+            icon: mdi:sofa
+            show_state: true
+            show_last_changed: false
+            show_attribute: false
+            attribute: effect
             tap_action:
-              action: more-info
-          - type: custom:stack-in-card
-            mode: horizontal
-            cards:
-              - type: vertical-stack
-                cards:
-                  - type: custom:mushroom-template-card
-                    primary: Master Bedroom
-                    secondary: >-
-                      {{ states('sensor.h5105_4f36_temperature')|round(2) }}°F | {{
-                      states('sensor.h5105_4f36_humidity')|round(2) }}%
-                    card_mod:
-                      style:
-                        mushroom-shape-icon$: |
-                          .shape {
-                            display: none !important;
-                          }
-                        .: |
-                          ha-card {
-                            border: 0px;
-                            padding-left: 10px;
-                            padding-top: 10px;
-                            width: 500px;
-                          }
-                  - type: custom:mushroom-template-card
-                    entity: switch.night_stand_zb
-                    layout: horizontal
-                    icon: mdi:weather-night
-                    tap_action:
-                      action: toggle
-                    hold_action:
-                      action: more-info
-                    double_tap_action:
-                      action: more-info
-                    icon_color: >-
-                      {% if is_state('switch.night_stand_zb', 'on') or
-                      is_state('light.master_bedroom_floor_lamp_zb', 'on') %} 
-                        #c5bded 
-                      {% else %}
-                        #7A7A7F 
-                      {% endif %}
-                    primary_info: none
-                    secondary_info: none
-                    card_mod:
-                      style:
-                        mushroom-shape-icon$: |
-                          .shape {
-                            --icon-size: 135px;
-                          }
-                        .: |
-                          ha-card {
-                            border: 0px;
-                            margin-left: -30px;
-                            margin-top: -20px;                          
-                          }
-              - type: custom:mushroom-chips-card
-                chips:
-                  - type: template
-                    entity: switch.night_stand_zb
-                    tap_action:
-                      action: toggle
-                    hold_action:
-                      action: more-info
-                    double_tap_action:
-                      action: more-info
-                    icon: mdi:lamp
-                    card_mod:
-                      style: |
-                        ha-card {
-                          --chip-background: {% if is_state('switch.night_stand_zb', 'on') %} #B7B5DD {% else %} #353535 {% endif %};
-                          --color: {% if is_state('switch.night_stand_zb', 'on') %} #65647A {% else %} #DBDBDB {% endif %};
-                          justify-content: center;
-                          height: 35px !important;
-                          width: 35px !important;
-                          border: 0 !important;
-                          box-shadow: none !important;
-                          border-radius: 22px !important;
-                        }
-                  - type: template
-                    entity: light.master_bedroom_floor_lamp_zb
-                    tap_action:
-                      action: toggle
-                    hold_action:
-                      action: more-info
-                    double_tap_action:
-                      action: none
-                    icon: mdi:desk-lamp
-                    card_mod:
-                      style: |
-                        ha-card {
-                          --chip-background: {% if is_state('light.master_bedroom_floor_lamp_zb', 'on') %} #323264 {% else %} #353535 {% endif %};
-                          --color: {% if is_state('light.master_bedroom_floor_lamp_zb', 'on') %} #E3C8C4 {% else %} #DBDBDB {% endif %};
-                          justify-content: center;
-                          height: 35px !important;
-                          width: 35px !important;
-                          border: 0 !important;
-                          box-shadow: none !important;
-                          border-radius: 22px !important;
-                        }
-                  - type: template
-                    entity: binary_sensor.master_bedroom_contact_contact
-                    tap_action:
-                      action: more-info
-                    hold_action:
-                      action: none
-                    double_tap_action:
-                      action: none
-                    icon: mdi:door-closed
-                    card_mod:
-                      style: |
-                        ha-card {
-                          --chip-background: {% if is_state('binary_sensor.master_bedroom_contact_contact', 'on') %} #9A8BAA {% else %} #353535 {% endif %};
-                          --color: {% if is_state('binary_sensor.master_bedroom_contact_contact', 'on') %} #574F60 {% else %} #DBDBDB {% endif %};
-                          justify-content: center;
-                          height: 35px !important;
-                          width: 35px !important;
-                          border: 0 !important;
-                          box-shadow: none !important;
-                          border-radius: 22px !important;
-                        }
-                card_mod:
-                  style: |
-                    .chip-container {
-                      flex-flow: column wrap-reverse !important;
-                      display: flex !important;
-                      --chip-spacing: 8px;
-                      margin: 12px;
-                    }
-                    .: |
-                    .container {
-                      align: end;
-                    }
-            card_mod:
-              style: |
-                ha-card {
-                  max-width: 100%;
-                  min-width: 50%;
-                  height: 186px;
-                }
+              action: toggle
+            card_layout: large
+            sub_button:
+              - icon: mdi:dots-horizontal
+                tap_action:
+                  action: navigate
+                  navigation_path: '#living'
+            entity: light.lines_9486
+            use_accent_color: true
+            scrolling_effect: false

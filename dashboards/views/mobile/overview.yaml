@@ -77,7 +77,7 @@ sections:
       use_accent_color: true
       scrolling_effect: false
 # POPUP CLIMATE
-- type: vertical-stack
+- type: grid
   cards:
     - type: custom:bubble-card
       card_type: pop-up
@@ -94,7 +94,7 @@ sections:
       disable_heat: false
       set_current_as_main: false
       name: Thermostat
-- type: vertical-stack
+- type: grid
   cards:
     - type: custom:bubble-card
       card_type: pop-up
@@ -111,7 +111,7 @@ sections:
       disable_heat: false
       set_current_as_main: false
       name: Thermostat
-- type: vertical-stack
+- type: grid
   cards:
     - type: custom:bubble-card
       card_type: pop-up
@@ -129,7 +129,7 @@ sections:
       set_current_as_main: false
       name: Thermostat
 # POPUP LIVING
-- type: vertical-stack
+- type: grid
   cards:
     - type: custom:bubble-card
       card_type: pop-up
@@ -184,7 +184,7 @@ sections:
       columns: 2
       title: Devices
 # POPUP MAIN
-- type: vertical-stack
+- type: grid
   cards:
     - type: custom:bubble-card
       card_type: pop-up
@@ -240,7 +240,7 @@ sections:
       columns: 2
       title: Devices
 #POPUP OFFICE
-- type: vertical-stack
+- type: grid
   cards:
     - type: custom:bubble-card
       card_type: pop-up

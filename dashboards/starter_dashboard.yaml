@@ -1,4 +1,4 @@
-title: Starter Dashboard
+title: Mobile Dashboard
 views:
   - title: Overview
     path: overview
@@ -40,3 +40,141 @@ views:
             fill_container: true
             tap_action:
               action: more-info
+          - type: custom:stack-in-card
+            mode: horizontal
+            cards:
+              - type: vertical-stack
+                cards:
+                  - type: custom:mushroom-template-card
+                    primary: Master Bedroom
+                    secondary: >-
+                      {{ states('sensor.h5105_4f36_temperature')|round(2) }}°F | {{
+                      states('sensor.h5105_4f36_humidity')|round(2) }}%
+                    card_mod:
+                      style:
+                        mushroom-shape-icon$: |
+                          .shape {
+                            display: none !important;
+                          }
+                        .: |
+                          ha-card {
+                            border: 0px;
+                            padding-left: 10px;
+                            padding-top: 10px;
+                            width: 500px;
+                          }
+                  - type: custom:mushroom-template-card
+                    entity: switch.night_stand_zb
+                    layout: horizontal
+                    icon: mdi:weather-night
+                    tap_action:
+                      action: toggle
+                    hold_action:
+                      action: more-info
+                    double_tap_action:
+                      action: more-info
+                    icon_color: >-
+                      {% if is_state('switch.night_stand_zb', 'on') or
+                      is_state('light.master_bedroom_floor_lamp_zb', 'on') %} 
+                        #c5bded 
+                      {% else %}
+                        #7A7A7F 
+                      {% endif %}
+                    primary_info: none
+                    secondary_info: none
+                    card_mod:
+                      style:
+                        mushroom-shape-icon$: |
+                          .shape {
+                            --icon-size: 135px;
+                          }
+                        .: |
+                          ha-card {
+                            border: 0px;
+                            margin-left: -30px;
+                            margin-top: -20px;                          
+                          }
+              - type: custom:mushroom-chips-card
+                chips:
+                  - type: template
+                    entity: switch.night_stand_zb
+                    tap_action:
+                      action: toggle
+                    hold_action:
+                      action: more-info
+                    double_tap_action:
+                      action: more-info
+                    icon: mdi:lamp
+                    card_mod:
+                      style: |
+                        ha-card {
+                          --chip-background: {% if is_state('switch.night_stand_zb', 'on') %} #B7B5DD {% else %} #353535 {% endif %};
+                          --color: {% if is_state('switch.night_stand_zb', 'on') %} #65647A {% else %} #DBDBDB {% endif %};
+                          justify-content: center;
+                          height: 35px !important;
+                          width: 35px !important;
+                          border: 0 !important;
+                          box-shadow: none !important;
+                          border-radius: 22px !important;
+                        }
+                  - type: template
+                    entity: light.master_bedroom_floor_lamp_zb
+                    tap_action:
+                      action: toggle
+                    hold_action:
+                      action: more-info
+                    double_tap_action:
+                      action: none
+                    icon: mdi:desk-lamp
+                    card_mod:
+                      style: |
+                        ha-card {
+                          --chip-background: {% if is_state('light.master_bedroom_floor_lamp_zb', 'on') %} #323264 {% else %} #353535 {% endif %};
+                          --color: {% if is_state('light.master_bedroom_floor_lamp_zb', 'on') %} #E3C8C4 {% else %} #DBDBDB {% endif %};
+                          justify-content: center;
+                          height: 35px !important;
+                          width: 35px !important;
+                          border: 0 !important;
+                          box-shadow: none !important;
+                          border-radius: 22px !important;
+                        }
+                  - type: template
+                    entity: binary_sensor.master_bedroom_contact_contact
+                    tap_action:
+                      action: more-info
+                    hold_action:
+                      action: none
+                    double_tap_action:
+                      action: none
+                    icon: mdi:door-closed
+                    card_mod:
+                      style: |
+                        ha-card {
+                          --chip-background: {% if is_state('binary_sensor.master_bedroom_contact_contact', 'on') %} #9A8BAA {% else %} #353535 {% endif %};
+                          --color: {% if is_state('binary_sensor.master_bedroom_contact_contact', 'on') %} #574F60 {% else %} #DBDBDB {% endif %};
+                          justify-content: center;
+                          height: 35px !important;
+                          width: 35px !important;
+                          border: 0 !important;
+                          box-shadow: none !important;
+                          border-radius: 22px !important;
+                        }
+                card_mod:
+                  style: |
+                    .chip-container {
+                      flex-flow: column wrap-reverse !important;
+                      display: flex !important;
+                      --chip-spacing: 8px;
+                      margin: 12px;
+                    }
+                    .: |
+                    .container {
+                      align: end;
+                    }
+            card_mod:
+              style: |
+                ha-card {
+                  max-width: 100%;
+                  min-width: 50%;
+                  height: 186px;
+                }

@@ -1,55 +1,58 @@
-type: vertical-stack
+type: grid
+columns: 1
 cards:
-  - type: custom:bubble-card
-    card_type: pop-up
-    hash: '#main'
-    button_type: state
-    name: Main Bedroom
-    force_icon: false
-    show_attribute: false
-    icon: mdi:bed-king-outline
-    entity: switch.main_room_lights
-    show_header: true
-
-  - square: false
-    type: grid
+  - type: vertical-stack
     cards:
       - type: custom:bubble-card
-        card_type: button
-        entity: switch.tall_lamp
-        tap_action:
-          action: toggle
-        icon: mdi:floor-lamp
+        card_type: pop-up
+        hash: '#main'
+        button_type: state
+        name: Main Bedroom
+        force_icon: false
+        show_attribute: false
+        icon: mdi:bed-king-outline
+        entity: switch.main_room_lights
+        show_header: true
 
-      - type: custom:bubble-card
-        card_type: button
-        entity: switch.bedside_lamp
-        icon: mdi:lamp
-
-      - type: custom:bubble-card
-        card_type: button
-        entity: light.shapes_8456
-        button_type: slider
-        icon: mdi:shape
-        slider_live_update: true
-        use_accent_color: true
-        name: Shapes
-        sub_button:
-          - entity: light.shapes_8456
-            icon: mdi:power
+      - square: false
+        type: grid
+        cards:
+          - type: custom:bubble-card
+            card_type: button
+            entity: switch.tall_lamp
             tap_action:
               action: toggle
-    columns: 2
-    title: Lights
+            icon: mdi:floor-lamp
 
-  - square: true
-    type: grid
-    cards:
-      - type: media-control
-        entity: media_player.bedroom_atv
-        theme: minimalist-desktop
-      - type: media-control
-        entity: media_player.bedroom_sonos
-        theme: minimalist-desktop
-    columns: 2
-    title: Devices
+          - type: custom:bubble-card
+            card_type: button
+            entity: switch.bedside_lamp
+            icon: mdi:lamp
+
+          - type: custom:bubble-card
+            card_type: button
+            entity: light.shapes_8456
+            button_type: slider
+            icon: mdi:shape
+            slider_live_update: true
+            use_accent_color: true
+            name: Shapes
+            sub_button:
+              - entity: light.shapes_8456
+                icon: mdi:power
+                tap_action:
+                  action: toggle
+        columns: 2
+        title: Lights
+
+      - square: true
+        type: grid
+        cards:
+          - type: media-control
+            entity: media_player.bedroom_atv
+            theme: minimalist-desktop
+          - type: media-control
+            entity: media_player.bedroom_sonos
+            theme: minimalist-desktop
+        columns: 2
+        title: Devices

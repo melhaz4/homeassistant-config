@@ -1,42 +1,45 @@
-type: vertical-stack
+type: grid
+columns: 1
 cards:
-  - type: custom:bubble-card
-    card_type: pop-up
-    hash: '#office'
-    button_type: state
-    name: Office
-    force_icon: false
-    show_attribute: false
-    icon: mdi:desk
-    show_header: true
-    entity: switch.office_lamp
-    scrolling_effect: false
-    tap_action:
-      action: toggle
-    button_action:
-      tap_action:
-        action: toggle
-
-  - square: false
-    type: grid
+  - type: vertical-stack
     cards:
       - type: custom:bubble-card
-        card_type: button
+        card_type: pop-up
+        hash: '#office'
+        button_type: state
+        name: Office
+        force_icon: false
+        show_attribute: false
+        icon: mdi:desk
+        show_header: true
         entity: switch.office_lamp
+        scrolling_effect: false
         tap_action:
           action: toggle
-        icon: mdi:desk-lamp
-        scrolling_effect: false
+        button_action:
+          tap_action:
+            action: toggle
 
-      - type: custom:mushroom-empty-card
-    columns: 2
-    title: Lights
+      - square: false
+        type: grid
+        cards:
+          - type: custom:bubble-card
+            card_type: button
+            entity: switch.office_lamp
+            tap_action:
+              action: toggle
+            icon: mdi:desk-lamp
+            scrolling_effect: false
 
-  - square: true
-    type: grid
-    cards:
-      - type: media-control
-        theme: minimalist-desktop
-        entity: media_player.office_atv
-    columns: 2
-    title: Devices
+          - type: custom:mushroom-empty-card
+        columns: 2
+        title: Lights
+
+      - square: true
+        type: grid
+        cards:
+          - type: media-control
+            theme: minimalist-desktop
+            entity: media_player.office_atv
+        columns: 2
+        title: Devices

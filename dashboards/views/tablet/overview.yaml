@@ -8,17 +8,7 @@ sections:
   - type: grid
     cards:
       - type: custom:button-card
-        name: |-
-              {% set time = now().hour %}
-              {% if (time >= 18) %}
-              Good Evening, {{user}}!
-              {% elif (time >= 12) %}
-              Good Afternoon, {{user}}!
-              {% elif (time >= 5) %}
-              Good Morning, {{user}}!
-              {% else %}
-              Hello, {{user}}!
-              {% endif %}
+        name: Hello, {{user}}!
         styles:
           card:
             # - font-family: In case of a custom font, otherwise you can remove this line

@@ -276,7 +276,6 @@ cards:
                     - color: var(--contrast20)
                   name:
                     - color: var(--contrast20)
-          - type: custom:mushroom-empty-card
 
   - type: horizontal-stack
     cards:

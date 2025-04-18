@@ -19,5 +19,6 @@ sections:
             - font-size: 32px
             - color: var(--contrast20)
 
+  # - !include sections/scenes.yaml
   - !include sections/lights.yaml
   - !include sections/media.yaml

@@ -281,7 +281,7 @@ cards:
     cards:
       #SHAPES
       - type: custom:button-card
-        name: Lamp
+        name: Office Lamp
         icon: mdi:shape
         entity: switch.office_lamp
         tap_action:

@@ -65,6 +65,6 @@ lovelace:
     tablet-dashboard:
       mode: yaml
       title: Tablet Dashboard
-      icon: mdi:cellphone
+      icon: mdi:tablet-dashboard
       show_in_sidebar: true
       filename: dashboards/tablet_dashboard.yaml

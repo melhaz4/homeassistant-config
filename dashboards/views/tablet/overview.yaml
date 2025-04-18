@@ -18,7 +18,17 @@ sections:
           name:
             - font-size: 32px
             - color: var(--contrast20)
+      - type: custom:bubble-card
+        card_type: empty-column
+      - show_current: true
+        show_forecast: false
+        type: weather-forecast
+        entity: weather.forecast_home
+        forecast_type: hourly
+        theme: Rounded
 
-  # - !include sections/scenes.yaml
+  - !include sections/scenes.yaml
+  - !include sections/climate.yaml
   - !include sections/lights.yaml
   - !include sections/media.yaml
+  - !include sections/car.yaml

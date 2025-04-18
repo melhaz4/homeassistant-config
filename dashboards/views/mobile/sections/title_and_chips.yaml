@@ -1,24 +1,24 @@
-- type: grid
-  cards:
-    - type: custom:mushroom-title-card
-      title: |-
-        {% set time = now().hour %}
-        {% if (time >= 18) %}
-        Good Evening, {{user}}!
-        {% elif (time >= 12) %}
-        Good Afternoon, {{user}}!
-        {% elif (time >= 5) %}
-        Good Morning, {{user}}!
-        {% else %}
-        Hello, {{user}}!
-        {% endif %}
-    - type: custom:mushroom-chips-card
-      chips:
-        - type: entity
-          entity: person.melanie
-        - type: weather
-          entity: weather.forecast_home
-          show_conditions: true
-          show_temperature: true
-        - type: menu
-      alignment: end
+type: grid
+cards:
+  - type: custom:mushroom-title-card
+    title: |-
+      {% set time = now().hour %}
+      {% if (time >= 18) %}
+      Good Evening, {{user}}!
+      {% elif (time >= 12) %}
+      Good Afternoon, {{user}}!
+      {% elif (time >= 5) %}
+      Good Morning, {{user}}!
+      {% else %}
+      Hello, {{user}}!
+      {% endif %}
+  - type: custom:mushroom-chips-card
+    chips:
+      - type: entity
+        entity: person.melanie
+      - type: weather
+        entity: weather.forecast_home
+        show_conditions: true
+        show_temperature: true
+      - type: menu
+    alignment: end

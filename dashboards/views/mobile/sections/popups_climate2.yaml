@@ -1,17 +1,17 @@
-- type: vertical-stack
-  cards:
-    - type: custom:bubble-card
-      card_type: pop-up
-      hash: '#climate2'
-      button_type: state
-      name: Zone 2
-      entity: climate.2nd_floor_hvac
-      force_icon: false
-      show_attribute: true
-      attribute: current_temperature
+type: vertical-stack
+cards:
+  - type: custom:bubble-card
+    card_type: pop-up
+    hash: '#climate2'
+    button_type: state
+    name: Zone 2
+    entity: climate.2nd_floor_hvac
+    force_icon: false
+    show_attribute: true
+    attribute: current_temperature
 
-    - type: custom:better-thermostat-ui-card
-      entity: climate.2nd_floor_hvac
-      disable_heat: false
-      set_current_as_main: false
-      name: Thermostat
+  - type: custom:better-thermostat-ui-card
+    entity: climate.2nd_floor_hvac
+    disable_heat: false
+    set_current_as_main: false
+    name: Thermostat

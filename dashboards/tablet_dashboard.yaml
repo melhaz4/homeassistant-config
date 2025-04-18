@@ -1,0 +1,4 @@
+title: Tablet Dashboard
+views:
+  - !include views/tablet/overview.yaml
+  

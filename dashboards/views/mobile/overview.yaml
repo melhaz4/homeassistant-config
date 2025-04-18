@@ -29,6 +29,43 @@ sections:
             show_temperature: true
           - type: menu
         alignment: end
+      - type: horizontal-stack
+        cards:
+          - type: custom:mushroom-template-card
+            primary: Lights
+            icon: mdi:light-switch
+            icon_color: amber
+            secondary: ''
+            layout: vertical
+            fill_container: true
+            multiline_secondary: true
+            tap_action:
+              action: navigate
+              navigation_path: '#lights'
+          - type: custom:mushroom-template-card
+            primary: Network
+            icon: mdi:wifi
+            secondary: ''
+            badge_color: ''
+            badge_icon: ''
+            icon_color: blue
+            fill_container: true
+            multiline_secondary: true
+            layout: vertical
+            tap_action:
+              action: navigate
+              navigation_path: '#network'
+          - type: custom:mushroom-template-card
+            primary: Car
+            icon: mdi:car
+            icon_color: purple
+            secondary: ''
+            layout: vertical
+            fill_container: true
+            multiline_secondary: true
+            tap_action:
+              action: navigate
+              navigation_path: '#car'
 
   # ROOMS AND LIGHTS
   - type: grid
@@ -38,7 +75,7 @@ sections:
         name: Rooms
         icon: mdi:view-dashboard
         card_layout: large
-# MAIN BEDROOM
+      # MAIN BEDROOM
       - type: custom:bubble-card
         card_type: button
         name: Main Bedroom
@@ -63,15 +100,17 @@ sections:
             tap_action:
               action: toggle
           - entity: media_player.bedroom_sonos
-            tap_action:
-              action: toggle
+            show_background: false
+            show_state: true
+            show_last_changed: false
+            show_attribute: false
           - icon: mdi:dots-horizontal
             tap_action:
               action: navigate
               navigation_path: '#main'
         scrolling_effect: false
         button_type: name
-# LIVING ROOM
+      # LIVING ROOM
       - type: custom:bubble-card
         card_type: button
         name: Living Room
@@ -96,15 +135,17 @@ sections:
             tap_action:
               action: toggle
           - entity: media_player.living_room_sonos
-            tap_action:
-              action: toggle
+            show_background: false
+            show_state: true
+            show_last_changed: false
+            show_attribute: false
           - icon: mdi:dots-horizontal
             tap_action:
               action: navigate
               navigation_path: '#living'
         scrolling_effect: false
         button_type: name
-# OFFICE
+      # OFFICE
       - type: custom:bubble-card
         card_type: button
         name: Office
@@ -129,15 +170,17 @@ sections:
             tap_action:
               action: toggle
           # - entity: #media_player.bedroom_sonos
-          #   tap_action:
-          #     action: toggle
+            # show_background: false
+            # show_state: true
+            # show_last_changed: false
+            # show_attribute: false
           - icon: mdi:dots-horizontal
             tap_action:
               action: navigate
               navigation_path: '#office'
         scrolling_effect: false
         button_type: name
-# GUEST ROOM
+      # GUEST ROOM
       - type: custom:bubble-card
         card_type: button
         name: Guest Room
@@ -162,15 +205,17 @@ sections:
           #   tap_action:
           #     action: toggle
           # - entity: #media_player.bedroom_sonos
-          #   tap_action:
-          #     action: toggle
+            # show_background: false
+            # show_state: true
+            # show_last_changed: false
+            # show_attribute: false
           - icon: mdi:dots-horizontal
             tap_action:
               action: navigate
               navigation_path: '#guest'
         scrolling_effect: false
         button_type: name
-# KITCHEN
+      # KITCHEN
       - type: custom:bubble-card
         card_type: button
         name: Kitchen
@@ -195,15 +240,17 @@ sections:
           #   tap_action:
           #     action: toggle
           # - entity: #media_player.bedroom_sonos
-          #   tap_action:
-          #     action: toggle
+            # show_background: false
+            # show_state: true
+            # show_last_changed: false
+            # show_attribute: false
           - icon: mdi:dots-horizontal
             tap_action:
               action: navigate
               navigation_path: '#kitchen'
         scrolling_effect: false
         button_type: name
-# OUTSIDE
+      # OUTSIDE
       - type: custom:bubble-card
         card_type: button
         name: Outside
@@ -228,15 +275,17 @@ sections:
           #   tap_action:
           #     action: toggle
           # - entity: #media_player.bedroom_sonos
-          #   tap_action:
-          #     action: toggle
+            # show_background: false
+            # show_state: true
+            # show_last_changed: false
+            # show_attribute: false
           - icon: mdi:dots-horizontal
             tap_action:
               action: navigate
               navigation_path: '#outside'
         scrolling_effect: false
         button_type: name
-# HALLWAYS
+      # HALLWAYS
       - type: custom:bubble-card
         card_type: button
         name: Hallways
@@ -261,8 +310,10 @@ sections:
           #   tap_action:
           #     action: toggle
           # - entity: #media_player.bedroom_sonos
-          #   tap_action:
-          #     action: toggle
+            # show_background: false
+            # show_state: true
+            # show_last_changed: false
+            # show_attribute: false
           - icon: mdi:dots-horizontal
             tap_action:
               action: navigate

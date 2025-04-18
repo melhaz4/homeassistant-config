@@ -1,0 +1,30 @@
+title: Overview
+path: overview
+icon: mdi:view-dashboard
+type: sections
+max_columns: 3
+
+sections:
+  - title: Overview
+    icon: mdi:view-dashboard
+    cards:
+      - type: custom:mini-graph-card
+        entities:
+          - entity: sensor.tablet_battery_level
+            name: Battery Level
+            show_state: true
+            show_icon: true
+            color_thresholds:
+              - value: 0
+                color: '#FF0000'
+              - value: 20
+                color: '#FFA500'
+              - value: 50
+                color: '#FFFF00'
+              - value: 80
+                color: '#008000'
+            line_color: '#008000'
+            line_width: 4
+            font_size_header: 16px
+            font_size_state: 14px
+            font_size_value: 12px

@@ -11,50 +11,43 @@ cards:
     cards:
       - type: media-control
         entity: media_player.office_atv
-        theme: Rounded
         grid_options:
           columns: 12
           rows: 2
       - type: media-control
         entity: media_player.living_room_atv
-        theme: Rounded
         grid_options:
           columns: 12
           rows: 2
       - type: media-control
         entity: media_player.bedroom_atv
-        theme: Rounded
         grid_options:
           columns: 12
           rows: 2
-  - type: horizontal-stack
-    cards:
-      - type: custom:mini-media-player
-        entity: media_player.blue_speaker
-        artwork: full-cover
-        theme: Rounded
-        media_controls:
-          - play_pause_stop
-          - on_off
-        volume_controls:
-          - volume_mute
-      - type: custom:mini-media-player
-        entity: media_player.living_room_sonos
-        artwork: full-cover
-        theme: Rounded
-        media_controls:
-          - play_pause_stop
-          - on_off
-        volume_controls:
-          - volume_mute
-  - type: horizontal-stack
-    cards:
-      - type: custom:mini-media-player
-        entity: media_player.bedroom_sonos
-        artwork: full-cover
-        theme: Rounded
-        media_controls:
-          - play_pause_stop
-          - on_off
-        volume_controls:
-          - volume_mute
+  - type: custom:mini-media-player
+    entity: media_player.blue_speaker
+    artwork: full-cover
+    theme: Rounded
+    media_controls:
+      - play_pause_stop
+      - on_off
+    volume_controls:
+      - volume_mute
+  - type: custom:mini-media-player
+    entity: media_player.living_room_sonos
+    artwork: full-cover
+    theme: Rounded
+    media_controls:
+      - play_pause_stop
+      - on_off
+    volume_controls:
+      - volume_mute
+  - type: custom:mini-media-player
+    entity: media_player.bedroom_sonos
+    artwork: full-cover
+    theme: Rounded
+    media_controls:
+      - play_pause_stop
+      - on_off
+    volume_controls:
+      - volume_mute

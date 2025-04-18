@@ -10,8 +10,8 @@ sections:
     cards:
       - type: custom:mini-graph-card
         entities:
-          - entity: sensor.tablet_battery_level
-            name: Battery Level
+          - entity: sensor.mels_personal_ipad_battery_level
+            name: Phone Battery Level
             show_state: true
             show_icon: true
             color_thresholds:

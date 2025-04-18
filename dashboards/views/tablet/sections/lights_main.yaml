@@ -140,6 +140,8 @@ cards:
                 - color: var(--contrast20)
               name:
                 - color: var(--contrast20)
+  - type: horizontal-stack
+    cards:
       # BEDSIDE LAMP
       - type: custom:button-card
         name: Bedside Lamp
@@ -188,6 +190,9 @@ cards:
                 - color: var(--contrast20)
               name:
                 - color: var(--contrast20)
+      - type: custom:mushroom-empty-card
+
+  # LIVING ROOM             
   - type: custom:bubble-card
     card_type: separator
     name: Living Room
@@ -279,6 +284,7 @@ cards:
                 - color: var(--contrast20)
               name:
                 - color: var(--contrast20)
+      - type: custom:mushroom-empty-card
 
   - type: custom:bubble-card
     card_type: separator
@@ -335,3 +341,4 @@ cards:
                 - color: var(--contrast20)
               name:
                 - color: var(--contrast20)
+      - type: custom:mushroom-empty-card

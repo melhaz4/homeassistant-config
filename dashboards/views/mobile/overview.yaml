@@ -38,10 +38,9 @@ sections:
         name: Rooms
         icon: mdi:view-dashboard
         card_layout: large
-
+# MAIN BEDROOM
       - type: custom:bubble-card
         card_type: button
-        entity: switch.main_room_lights
         name: Main Bedroom
         icon: mdi:bed-king-outline
         show_state: true
@@ -52,12 +51,27 @@ sections:
           action: toggle
         card_layout: large
         sub_button:
+          - entity: switch.main_room_lights
+            icon: mdi:lightbulb-cfl
+            show_name: false
+            show_last_changed: false
+            show_attribute: false
+            tap_action:
+              action: toggle
+          - entity: media_player.bedroom_atv
+            icon: mdi:television
+            tap_action:
+              action: toggle
+          - entity: media_player.bedroom_sonos
+            tap_action:
+              action: toggle
           - icon: mdi:dots-horizontal
             tap_action:
               action: navigate
               navigation_path: '#main'
         scrolling_effect: false
-
+        button_type: name
+# LIVING ROOM
       - type: custom:bubble-card
         card_type: button
         name: Living Room
@@ -70,13 +84,199 @@ sections:
           action: toggle
         card_layout: large
         sub_button:
+          - entity: light.lines_9486
+            icon: mdi:lightbulb-cfl
+            show_name: false
+            show_last_changed: false
+            show_attribute: false
+            tap_action:
+              action: toggle
+          - entity: media_player.living_room_atv
+            icon: mdi:television
+            tap_action:
+              action: toggle
+          - entity: media_player.living_room_sonos
+            tap_action:
+              action: toggle
           - icon: mdi:dots-horizontal
             tap_action:
               action: navigate
               navigation_path: '#living'
-        entity: light.lines_9486
-        use_accent_color: true
         scrolling_effect: false
+        button_type: name
+# OFFICE
+      - type: custom:bubble-card
+        card_type: button
+        name: Office
+        icon: mdi:desk
+        show_state: true
+        show_last_changed: false
+        show_attribute: false
+        attribute: effect
+        tap_action:
+          action: toggle
+        card_layout: large
+        sub_button:
+          - entity: switch.office_lamp
+            icon: mdi:lightbulb-cfl
+            show_name: false
+            show_last_changed: false
+            show_attribute: false
+            tap_action:
+              action: toggle
+          - entity: media_player.office_atv
+            icon: mdi:television
+            tap_action:
+              action: toggle
+          # - entity: #media_player.bedroom_sonos
+          #   tap_action:
+          #     action: toggle
+          - icon: mdi:dots-horizontal
+            tap_action:
+              action: navigate
+              navigation_path: '#office'
+        scrolling_effect: false
+        button_type: name
+# GUEST ROOM
+      - type: custom:bubble-card
+        card_type: button
+        name: Guest Room
+        icon: mdi:bed
+        show_state: true
+        show_last_changed: false
+        show_attribute: false
+        attribute: effect
+        tap_action:
+          action: toggle
+        card_layout: large
+        sub_button:
+          # - entity: #switch.main_room_lights
+          #   icon: mdi:lightbulb-cfl
+          #   show_name: false
+          #   show_last_changed: false
+          #   show_attribute: false
+          #   tap_action:
+          #     action: toggle
+          # - entity: #media_player.bedroom_atv
+          #   icon: mdi:television
+          #   tap_action:
+          #     action: toggle
+          # - entity: #media_player.bedroom_sonos
+          #   tap_action:
+          #     action: toggle
+          - icon: mdi:dots-horizontal
+            tap_action:
+              action: navigate
+              navigation_path: '#guest'
+        scrolling_effect: false
+        button_type: name
+# KITCHEN
+      - type: custom:bubble-card
+        card_type: button
+        name: Kitchen
+        icon: mdi:fridge
+        show_state: true
+        show_last_changed: false
+        show_attribute: false
+        attribute: effect
+        tap_action:
+          action: toggle
+        card_layout: large
+        sub_button:
+          # - entity: #switch.main_room_lights
+          #   icon: mdi:lightbulb-cfl
+          #   show_name: false
+          #   show_last_changed: false
+          #   show_attribute: false
+          #   tap_action:
+          #     action: toggle
+          # - entity: #media_player.bedroom_atv
+          #   icon: mdi:television
+          #   tap_action:
+          #     action: toggle
+          # - entity: #media_player.bedroom_sonos
+          #   tap_action:
+          #     action: toggle
+          - icon: mdi:dots-horizontal
+            tap_action:
+              action: navigate
+              navigation_path: '#kitchen'
+        scrolling_effect: false
+        button_type: name
+# OUTSIDE
+      - type: custom:bubble-card
+        card_type: button
+        name: Outside
+        icon: mdi:car
+        show_state: true
+        show_last_changed: false
+        show_attribute: false
+        attribute: effect
+        tap_action:
+          action: toggle
+        card_layout: large
+        sub_button:
+          # - entity: #switch.main_room_lights
+          #   icon: mdi:lightbulb-cfl
+          #   show_name: false
+          #   show_last_changed: false
+          #   show_attribute: false
+          #   tap_action:
+          #     action: toggle
+          # - entity: #media_player.bedroom_atv
+          #   icon: mdi:television
+          #   tap_action:
+          #     action: toggle
+          # - entity: #media_player.bedroom_sonos
+          #   tap_action:
+          #     action: toggle
+          - icon: mdi:dots-horizontal
+            tap_action:
+              action: navigate
+              navigation_path: '#outside'
+        scrolling_effect: false
+        button_type: name
+# HALLWAYS
+      - type: custom:bubble-card
+        card_type: button
+        name: Hallways
+        icon: mdi:walk
+        show_state: true
+        show_last_changed: false
+        show_attribute: false
+        attribute: effect
+        tap_action:
+          action: toggle
+        card_layout: large
+        sub_button:
+          # - entity: #switch.main_room_lights
+          #   icon: mdi:lightbulb-cfl
+          #   show_name: false
+          #   show_last_changed: false
+          #   show_attribute: false
+          #   tap_action:
+          #     action: toggle
+          # - entity: #media_player.bedroom_atv
+          #   icon: mdi:television
+          #   tap_action:
+          #     action: toggle
+          # - entity: #media_player.bedroom_sonos
+          #   tap_action:
+          #     action: toggle
+          - icon: mdi:dots-horizontal
+            tap_action:
+              action: navigate
+              navigation_path: '#hallways'
+        scrolling_effect: false
+        button_type: name
+
+  - type: grid
+    cards:
+      - type: custom:bubble-card
+        card_type: separator
+        name: Climate
+        icon: mdi:home-thermometer
+        card_layout: large
 
   # POPUP CLIMATE
   - !include sections/popups_climate1.yaml

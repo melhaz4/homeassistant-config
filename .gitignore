@@ -11,3 +11,4 @@ __pycache__/
 *.log
 secrets.yaml  # If you're not using encrypted secrets
 .vscode/
+backups/

@@ -1,0 +1,101 @@
+- id: '1745008204593'
+  name: Bedtime
+  entities:
+    switch.bedside_lamp:
+      friendly_name: Bedside Lamp
+      state: 'off'
+    light.shapes_8456:
+      min_color_temp_kelvin: 1200
+      max_color_temp_kelvin: 6500
+      min_mireds: 153
+      max_mireds: 833
+      effect_list:
+      - Beatdrop
+      - Blaze
+      - Cocoa Beach
+      - Cotton Candy
+      - Date Night
+      - Hip Hop
+      - Hot Sauce
+      - Jungle
+      - Lightscape
+      - Morning Sky
+      - Northern Lights
+      - Pop Rocks
+      - Prism
+      - Starlight
+      - Sundown
+      - Waterfall
+      supported_color_modes:
+      - color_temp
+      - hs
+      effect:
+      color_mode:
+      brightness:
+      color_temp_kelvin:
+      color_temp:
+      hs_color:
+      rgb_color:
+      xy_color:
+      friendly_name: Nanoleaf Shapes
+      supported_features: 36
+      state: 'off'
+    switch.tall_lamp:
+      friendly_name: Tall Lamp
+      state: 'off'
+  icon: mdi:lightbulb-night-outline
+  metadata: {}
+- id: '1745008318704'
+  name: Lights On
+  entities:
+    switch.tall_lamp:
+      friendly_name: Tall Lamp
+      state: 'on'
+    switch.bedside_lamp:
+      friendly_name: Bedside Lamp
+      state: 'on'
+    light.shapes_8456:
+      min_color_temp_kelvin: 1200
+      max_color_temp_kelvin: 6500
+      min_mireds: 153
+      max_mireds: 833
+      effect_list:
+      - Beatdrop
+      - Blaze
+      - Cocoa Beach
+      - Cotton Candy
+      - Date Night
+      - Hip Hop
+      - Hot Sauce
+      - Jungle
+      - Lightscape
+      - Morning Sky
+      - Northern Lights
+      - Pop Rocks
+      - Prism
+      - Starlight
+      - Sundown
+      - Waterfall
+      supported_color_modes:
+      - color_temp
+      - hs
+      effect: Northern Lights
+      color_mode: hs
+      brightness: 142
+      color_temp_kelvin:
+      color_temp:
+      hs_color:
+      - 0
+      - 0
+      rgb_color:
+      - 255
+      - 255
+      - 255
+      xy_color:
+      - 0.323
+      - 0.329
+      friendly_name: Nanoleaf Shapes
+      supported_features: 36
+      state: 'on'
+  icon: mdi:lightbulb-on
+  metadata: {}

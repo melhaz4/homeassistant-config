@@ -1,102 +1,15 @@
-2025-04-17 08:43:41.817 WARNING (SyncWorker_0) [homeassistant.loader] We found a custom integration hacs which has not been tested by Home Assistant. This component might cause stability problems, be sure to disable it if you experience issues with Home Assistant
-2025-04-17 08:43:41.817 WARNING (SyncWorker_0) [homeassistant.loader] We found a custom integration browser_mod which has not been tested by Home Assistant. This component might cause stability problems, be sure to disable it if you experience issues with Home Assistant
-2025-04-17 08:43:41.817 WARNING (SyncWorker_0) [homeassistant.loader] We found a custom integration ui_lovelace_minimalist which has not been tested by Home Assistant. This component might cause stability problems, be sure to disable it if you experience issues with Home Assistant
-2025-04-17 08:43:42.861 ERROR (MainThread) [custom_components.ui_lovelace_minimalist.base] HACS Frontend repo "button-card" is already installed, Remove it or disable include custom cards
-2025-04-17 08:43:42.861 ERROR (MainThread) [custom_components.ui_lovelace_minimalist.base] HACS Frontend repo "light-entity-card" is already installed, Remove it or disable include custom cards
-2025-04-17 08:43:42.861 ERROR (MainThread) [custom_components.ui_lovelace_minimalist.base] HACS Frontend repo "lovelace-card-mod" is already installed, Remove it or disable include custom cards
-2025-04-17 08:43:42.861 ERROR (MainThread) [custom_components.ui_lovelace_minimalist.base] HACS Frontend repo "lovelace-auto-entities" is already installed, Remove it or disable include custom cards
-2025-04-17 08:43:42.861 ERROR (MainThread) [custom_components.ui_lovelace_minimalist.base] HACS Frontend repo "mini-graph-card" is already installed, Remove it or disable include custom cards
-2025-04-17 08:43:42.861 ERROR (MainThread) [custom_components.ui_lovelace_minimalist.base] HACS Frontend repo "mini-media-player" is already installed, Remove it or disable include custom cards
-2025-04-17 08:43:42.861 ERROR (MainThread) [custom_components.ui_lovelace_minimalist.base] HACS Frontend repo "simple-weather-card" is already installed, Remove it or disable include custom cards
-2025-04-17 08:43:42.861 ERROR (MainThread) [custom_components.ui_lovelace_minimalist.base] HACS Frontend repo "lovelace-layout-card" is already installed, Remove it or disable include custom cards
-2025-04-17 08:43:42.861 ERROR (MainThread) [custom_components.ui_lovelace_minimalist.base] HACS Frontend repo "lovelace-state-switch" is already installed, Remove it or disable include custom cards
-2025-04-17 08:43:42.861 ERROR (MainThread) [custom_components.ui_lovelace_minimalist.base] HACS Frontend repo "weather-radar-card" is already installed, Remove it or disable include custom cards
-2025-04-17 08:43:55.698 WARNING (MainThread) [homeassistant.components.sonos] Subscription to 192.168.68.75 failed, attempting to poll directly
-2025-04-17 08:44:10.987 ERROR (MainThread) [frontend.js.modern.202504110] Uncaught error from Chrome 135.0.0.0 on macOS 10.15.7
-Error: Failed to execute 'define' on 'CustomElementRegistry': the name "button-card-action-handler" has already been used with this registry
-O.define (src/scoped-custom-element-registry.ts:180:12)
-/hacsfiles/button-card/button-card.js:1:24357
-2025-04-17 08:44:10.987 ERROR (MainThread) [frontend.js.modern.202504110] Uncaught error from Chrome 135.0.0.0 on macOS 10.15.7
-Error: Failed to execute 'define' on 'CustomElementRegistry': the name "light-entity-card-editor" has already been used with this registry
-O.define (src/scoped-custom-element-registry.ts:180:12)
-Module.<anonymous> (/hacsfiles/light-entity-card/light-entity-card.js:365:488)
-i (/hacsfiles/light-entity-card/light-entity-card.js:1:110)
-/hacsfiles/light-entity-card/light-entity-card.js:1:909
-/hacsfiles/light-entity-card/light-entity-card.js:1:918
-2025-04-17 08:44:10.988 ERROR (MainThread) [frontend.js.modern.202504110] Uncaught error from Chrome 135.0.0.0 on macOS 10.15.7
-Error: Failed to execute 'define' on 'CustomElementRegistry': the name "masonry-layout" has already been used with this registry
-O.define (src/scoped-custom-element-registry.ts:180:12)
-/hacsfiles/lovelace-layout-card/layout-card.js:47:107
-2025-04-17 08:44:10.988 ERROR (MainThread) [frontend.js.modern.202504110] Uncaught error from Chrome 135.0.0.0 on macOS 10.15.7
-Error: Failed to execute 'define' on 'CustomElementRegistry': the name "auto-entities-editor" has already been used with this registry
-O.define (src/scoped-custom-element-registry.ts:180:12)
-/hacsfiles/lovelace-auto-entities/auto-entities.js:172:1111
-2025-04-17 08:44:10.988 ERROR (MainThread) [frontend.js.modern.202504110] Uncaught error from Chrome 135.0.0.0 on macOS 10.15.7
-Error: Failed to execute 'define' on 'CustomElementRegistry': the name "mini-graph-card" has already been used with this registry
-O.define (src/scoped-custom-element-registry.ts:180:12)
-/hacsfiles/mini-graph-card/mini-graph-card-bundle.js:1:112575
-/hacsfiles/mini-graph-card/mini-graph-card-bundle.js:1:18819
-/hacsfiles/mini-graph-card/mini-graph-card-bundle.js:1:18824
-/hacsfiles/mini-graph-card/mini-graph-card-bundle.js:1:112813
-2025-04-17 08:44:10.988 ERROR (MainThread) [frontend.js.modern.202504110] Uncaught error from Chrome 135.0.0.0 on macOS 10.15.7
-Error: Failed to execute 'define' on 'CustomElementRegistry': the name "weather-radar-card-editor" has already been used with this registry
-O.define (src/scoped-custom-element-registry.ts:180:12)
-/hacsfiles/weather-radar-card/weather-radar-card.js:29:61
-/hacsfiles/weather-radar-card/weather-radar-card.js:29:76
-n (/hacsfiles/weather-radar-card/weather-radar-card.js:1:914)
-/hacsfiles/weather-radar-card/weather-radar-card.js:1291:140
-2025-04-17 08:44:10.989 ERROR (MainThread) [frontend.js.modern.202504110] Uncaught error from Chrome 135.0.0.0 on macOS 10.15.7
-Error: Failed to execute 'define' on 'CustomElementRegistry': the name "mushroom-select" has already been used with this registry
-O.define (src/scoped-custom-element-registry.ts:180:12)
-/hacsfiles/lovelace-mushroom/mushroom.js:23:126
-Kr (/hacsfiles/lovelace-mushroom/mushroom.js:1:15090)
-/hacsfiles/lovelace-mushroom/mushroom.js:286:46391
-2025-04-17 08:44:11.005 ERROR (MainThread) [homeassistant.helpers.event] Error while processing template: Template<template=({{ states('sensor.h5105_4f36_temperature')|round(2) }}°F | {{ states('sensor.h5105_4f36_humidity')|round(2) }}%) renders=2>
-Traceback (most recent call last):
-  File "/usr/src/homeassistant/homeassistant/helpers/template.py", line 1961, in forgiving_round
-    value = round(float(value), precision)
-                  ~~~~~^^^^^^^
-ValueError: could not convert string to float: 'unknown'
-
-During handling of the above exception, another exception occurred:
-
-Traceback (most recent call last):
-  File "/usr/src/homeassistant/homeassistant/helpers/template.py", line 644, in async_render
-    render_result = _render_with_context(self.template, compiled, **kwargs)
-  File "/usr/src/homeassistant/homeassistant/helpers/template.py", line 2904, in _render_with_context
-    return template.render(**kwargs)
-           ~~~~~~~~~~~~~~~^^^^^^^^^^
-  File "/usr/local/lib/python3.13/site-packages/jinja2/environment.py", line 1295, in render
-    self.environment.handle_exception()
-    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
-  File "/usr/local/lib/python3.13/site-packages/jinja2/environment.py", line 942, in handle_exception
-    raise rewrite_traceback_stack(source=source)
-  File "<template>", line 1, in top-level template code
-  File "/usr/src/homeassistant/homeassistant/helpers/template.py", line 1966, in forgiving_round
-    raise_no_default("round", value)
-    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^
-  File "/usr/src/homeassistant/homeassistant/helpers/template.py", line 1942, in raise_no_default
-    raise ValueError(
-    ...<2 lines>...
-    )
-ValueError: Template error: round got invalid input 'unknown' when rendering template '{{ states('sensor.h5105_4f36_temperature')|round(2) }}°F | {{ states('sensor.h5105_4f36_humidity')|round(2) }}%' but no default was specified
-
-The above exception was the direct cause of the following exception:
-
-Traceback (most recent call last):
-  File "/usr/src/homeassistant/homeassistant/helpers/template.py", line 761, in async_render_to_info
-    render_info._result = self.async_render(  # noqa: SLF001
-                          ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
-        variables, strict=strict, log_fn=log_fn, **kwargs
-        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-    )
-    ^
-  File "/usr/src/homeassistant/homeassistant/helpers/template.py", line 646, in async_render
-    raise TemplateError(err) from err
-homeassistant.exceptions.TemplateError: ValueError: Template error: round got invalid input 'unknown' when rendering template '{{ states('sensor.h5105_4f36_temperature')|round(2) }}°F | {{ states('sensor.h5105_4f36_humidity')|round(2) }}%' but no default was specified
-2025-04-17 08:55:55.241 WARNING (MainThread) [homeassistant.components.http.ban] Login attempt or request with invalid authentication from 192.168.68.71 (192.168.68.71). Requested URL: '/api/websocket'. (None)
-2025-04-17 08:56:21.027 WARNING (MainThread) [homeassistant.components.http.ban] Login attempt or request with invalid authentication from 192.168.68.71 (192.168.68.71). Requested URL: '/api/websocket'. (None)
-2025-04-17 08:56:22.464 WARNING (MainThread) [homeassistant.components.http.ban] Login attempt or request with invalid authentication from 192.168.68.71 (192.168.68.71). Requested URL: '/api/websocket'. (None)
-2025-04-17 09:30:02.514 WARNING (MainThread) [homeassistant.components.nanoleaf] Received unknown touch gesture ID 6
-2025-04-17 09:30:11.223 WARNING (MainThread) [homeassistant.components.nanoleaf] Received unknown touch gesture ID 1
-2025-04-17 09:30:12.590 WARNING (MainThread) [homeassistant.components.nanoleaf] Received unknown touch gesture ID 6
+2025-04-18 13:14:54.361 WARNING (SyncWorker_0) [homeassistant.loader] We found a custom integration hacs which has not been tested by Home Assistant. This component might cause stability problems, be sure to disable it if you experience issues with Home Assistant
+2025-04-18 13:14:54.361 WARNING (SyncWorker_0) [homeassistant.loader] We found a custom integration tplink_router which has not been tested by Home Assistant. This component might cause stability problems, be sure to disable it if you experience issues with Home Assistant
+2025-04-18 13:14:54.362 WARNING (SyncWorker_0) [homeassistant.loader] We found a custom integration browser_mod which has not been tested by Home Assistant. This component might cause stability problems, be sure to disable it if you experience issues with Home Assistant
+2025-04-18 13:14:54.362 WARNING (SyncWorker_0) [homeassistant.loader] We found a custom integration ui_lovelace_minimalist which has not been tested by Home Assistant. This component might cause stability problems, be sure to disable it if you experience issues with Home Assistant
+2025-04-18 13:14:55.689 ERROR (MainThread) [custom_components.ui_lovelace_minimalist.base] HACS Frontend repo "button-card" is already installed, Remove it or disable include custom cards
+2025-04-18 13:14:55.689 ERROR (MainThread) [custom_components.ui_lovelace_minimalist.base] HACS Frontend repo "light-entity-card" is already installed, Remove it or disable include custom cards
+2025-04-18 13:14:55.689 ERROR (MainThread) [custom_components.ui_lovelace_minimalist.base] HACS Frontend repo "lovelace-card-mod" is already installed, Remove it or disable include custom cards
+2025-04-18 13:14:55.689 ERROR (MainThread) [custom_components.ui_lovelace_minimalist.base] HACS Frontend repo "lovelace-auto-entities" is already installed, Remove it or disable include custom cards
+2025-04-18 13:14:55.689 ERROR (MainThread) [custom_components.ui_lovelace_minimalist.base] HACS Frontend repo "mini-graph-card" is already installed, Remove it or disable include custom cards
+2025-04-18 13:14:55.689 ERROR (MainThread) [custom_components.ui_lovelace_minimalist.base] HACS Frontend repo "mini-media-player" is already installed, Remove it or disable include custom cards
+2025-04-18 13:14:55.689 ERROR (MainThread) [custom_components.ui_lovelace_minimalist.base] HACS Frontend repo "simple-weather-card" is already installed, Remove it or disable include custom cards
+2025-04-18 13:14:55.689 ERROR (MainThread) [custom_components.ui_lovelace_minimalist.base] HACS Frontend repo "lovelace-layout-card" is already installed, Remove it or disable include custom cards
+2025-04-18 13:14:55.689 ERROR (MainThread) [custom_components.ui_lovelace_minimalist.base] HACS Frontend repo "lovelace-state-switch" is already installed, Remove it or disable include custom cards
+2025-04-18 13:14:55.689 ERROR (MainThread) [custom_components.ui_lovelace_minimalist.base] HACS Frontend repo "weather-radar-card" is already installed, Remove it or disable include custom cards
+2025-04-18 13:15:20.209 WARNING (MainThread) [homeassistant.components.sonos] Subscription to 192.168.68.85 failed, attempting to poll directly

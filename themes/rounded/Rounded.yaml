@@ -217,3 +217,69 @@ Rounded:
       color-tint: "0.20"
       # Contrast RGB variables
       contrast1-RGB: 255,255,255
+
+card-mod-theme: Rounded
+
+card-mod-view-yaml: |
+
+  hui-masonry-view:
+    $: |
+
+      /* Swipe-card full width on mobile */
+
+      @media screen and (max-width: 599px) {
+        #columns .column swipe-card {
+          margin-left: -4px;
+          margin-right: -4px;
+        }
+      }
+
+card-mod-card-yaml: |
+
+  .: |
+
+    /* General changes */ 
+
+    ha-card {
+      transition: none !important;
+      # font-family: 'custom font, otherwise remove this line', 'Roboto', sans-serif !important;
+    }
+
+    /* Graph card style */
+
+    .graph {
+      background: var(--blue-tint);
+      display: flex;
+      overflow: hidden; /* Temporary fix for graph overflow bug */
+    }
+    
+    .graph .name {
+      font-size: 12px;
+      line-height: 18px;
+      background: var(--black);
+      color: var(--white);
+      padding: 6px 10px;
+      border-radius: 100px;
+      z-index: 1;
+    }
+
+    .graph .icon {
+      display: none;
+    }
+
+    .graph .info {
+      margin-top: 0;
+      padding: 24px 24px 0 24px;
+      order: 1;
+    }
+
+    .graph hui-graph-header-footer {
+      order: 3;
+    }
+
+    .graph .header {
+      padding: 0 24px;
+      order: 2;
+      margin: 4px 0 -16px 0;
+      z-index: 1;
+    }

@@ -5,26 +5,33 @@ type: sections
 max_columns: 3
 
 sections:
-  - title: Overview
-    icon: mdi:view-dashboard
+  - type: grid
     cards:
-      - type: custom:mini-graph-card
-        entities:
-          - entity: sensor.mels_personal_ipad_battery_level
-            name: Phone Battery Level
-            show_state: true
-            show_icon: true
-            color_thresholds:
-              - value: 0
-                color: '#FF0000'
-              - value: 20
-                color: '#FFA500'
-              - value: 50
-                color: '#FFFF00'
-              - value: 80
-                color: '#008000'
-            line_color: '#008000'
-            line_width: 4
-            font_size_header: 16px
-            font_size_state: 14px
-            font_size_value: 12px
+      - type: custom:button-card
+        name: |-
+              {% set time = now().hour %}
+              {% if (time >= 18) %}
+              Good Evening, {{user}}!
+              {% elif (time >= 12) %}
+              Good Afternoon, {{user}}!
+              {% elif (time >= 5) %}
+              Good Morning, {{user}}!
+              {% else %}
+              Hello, {{user}}!
+              {% endif %}
+        styles:
+          card:
+            # - font-family: In case of a custom font, otherwise you can remove this line
+            - background: none
+            - padding: 16px 0
+            - '--mdc-ripple-press-opacity': 0
+          name:
+            - font-size: 32px
+            - color: var(--contrast20)
+      - type: custom:bubble-card
+        card_type: separator
+        name: Lights
+        icon: mdi:view-switch
+        card_layout: large
+
+  - !include sections/lights_main.yaml

@@ -274,9 +274,9 @@ sections:
   - !include sections/climate_header.yaml
 
   # POPUP CLIMATE
-  - !include sections/popups_climate1.yaml
-  - !include sections/popups_climate2.yaml
-  - !include sections/popups_climate3.yaml
+  # - !include sections/popups_climate1.yaml
+  # - !include sections/popups_climate2.yaml
+  # - !include sections/popups_climate3.yaml
 
   # POPUP LIVING
   - !include sections/popups_living.yaml

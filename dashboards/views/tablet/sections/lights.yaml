@@ -3,8 +3,8 @@ columns: 1
 cards:
   - type: custom:bubble-card
     card_type: separator
-    name: Main Bedroom
-    icon: mdi:bed-king-outline
+    name: Lights
+    icon: mdi:light-switch
     card_layout: large
   - type: horizontal-stack
     cards:
@@ -190,107 +190,94 @@ cards:
                 - color: var(--contrast20)
               name:
                 - color: var(--contrast20)
-      - type: custom:mushroom-empty-card
-
-  # LIVING ROOM             
-  - type: custom:bubble-card
-    card_type: separator
-    name: Living Room
-    icon: mdi:sofa
-    card_layout: large
-  - type: horizontal-stack
-    cards:
-      # LINES
-      - type: custom:button-card
-        name: Nanoleaf Lines
-        icon: mdi:track-light
-        entity: light.lines_9486
-        tap_action:
-          action: toggle
-          haptic: medium
-        hold_action:
-          action: more-info
-          haptic: medium
-        custom_fields:
-          slider:
-            card:
-              type: custom:my-slider-v2
-              entity: light.lines_9486
-              colorMode: brightness
-              styles:
-                container:
-                  - background: none
-                  - border-radius: 100px
-                  - overflow: visible
+      - type: horizontal-stack
+        cards:
+          # LINES
+          - type: custom:button-card
+            name: Nanoleaf Lines
+            icon: mdi:track-light
+            entity: light.lines_9486
+            tap_action:
+              action: toggle
+              haptic: medium
+            hold_action:
+              action: more-info
+              haptic: medium
+            custom_fields:
+              slider:
                 card:
-                  - height: 16px
-                  - padding: 0 8px
-                  - background: |
-                      [[[
-                        if (entity.state == "on") return "linear-gradient(90deg, rgba(255,255,255, 0.3) 0%, rgba(255,255,255, 1) 100%)";
-                        else return "var(--contrast4)";
-                      ]]]
-                track:
-                  - overflow: visible
-                  - background: none
-                progress:
-                  - background: none
-                thumb:
-                  - background: |
-                      [[[
-                        if (entity.state == "on") return "var(--black)";
-                        if (entity.state == "off") return "var(--contrast20)";
-                        else return "var(--contrast8)";
-                      ]]]
-                  - top: 2px
-                  - right: '-6px'
-                  - height: 12px
-                  - width: 12px
-                  - border-radius: 100px
-        styles:
-          grid:
-            - grid-template-areas: '"i" "n" "slider"'
-            - grid-template-columns: 1fr
-            - grid-template-rows: 1fr min-content min-content
-          card:
-            # - font-family: In case of a custom font, otherwise you can remove this line
-            - background: var(--contrast2)
-            - padding: 16px
-            - '--mdc-ripple-press-opacity': 0
-          img_cell:
-            - justify-self: start
-            - width: 24px
-          icon:
-            - width: 24px
-            - height: 24px
-            - color: var(--contrast8)
-          name:
-            - justify-self: start
-            - font-size: 14px
-            - margin: 4px 0 12px 0
-            - color: var(--contrast8)
-        state:
-          - value: 'on'
+                  type: custom:my-slider-v2
+                  entity: light.lines_9486
+                  colorMode: brightness
+                  styles:
+                    container:
+                      - background: none
+                      - border-radius: 100px
+                      - overflow: visible
+                    card:
+                      - height: 16px
+                      - padding: 0 8px
+                      - background: |
+                          [[[
+                            if (entity.state == "on") return "linear-gradient(90deg, rgba(255,255,255, 0.3) 0%, rgba(255,255,255, 1) 100%)";
+                            else return "var(--contrast4)";
+                          ]]]
+                    track:
+                      - overflow: visible
+                      - background: none
+                    progress:
+                      - background: none
+                    thumb:
+                      - background: |
+                          [[[
+                            if (entity.state == "on") return "var(--black)";
+                            if (entity.state == "off") return "var(--contrast20)";
+                            else return "var(--contrast8)";
+                          ]]]
+                      - top: 2px
+                      - right: '-6px'
+                      - height: 12px
+                      - width: 12px
+                      - border-radius: 100px
             styles:
+              grid:
+                - grid-template-areas: '"i" "n" "slider"'
+                - grid-template-columns: 1fr
+                - grid-template-rows: 1fr min-content min-content
               card:
-                - background: var(--yellow)
+                # - font-family: In case of a custom font, otherwise you can remove this line
+                - background: var(--contrast2)
+                - padding: 16px
+                - '--mdc-ripple-press-opacity': 0
+              img_cell:
+                - justify-self: start
+                - width: 24px
               icon:
-                - color: var(--black)
+                - width: 24px
+                - height: 24px
+                - color: var(--contrast8)
               name:
-                - color: var(--black)
-          - value: 'off'
-            styles:
-              icon:
-                - color: var(--contrast20)
-              name:
-                - color: var(--contrast20)
-      - type: custom:mushroom-empty-card
+                - justify-self: start
+                - font-size: 14px
+                - margin: 4px 0 12px 0
+                - color: var(--contrast8)
+            state:
+              - value: 'on'
+                styles:
+                  card:
+                    - background: var(--yellow)
+                  icon:
+                    - color: var(--black)
+                  name:
+                    - color: var(--black)
+              - value: 'off'
+                styles:
+                  icon:
+                    - color: var(--contrast20)
+                  name:
+                    - color: var(--contrast20)
+          - type: custom:mushroom-empty-card
 
-  - type: custom:bubble-card
-    card_type: separator
-    name: Office
-    icon: mdi:desk
-    card_layout: large
   - type: horizontal-stack
     cards:
       #SHAPES

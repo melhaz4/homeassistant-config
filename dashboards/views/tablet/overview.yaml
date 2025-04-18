@@ -1,6 +1,6 @@
 title: Overview
 path: overview
-icon: mdi:view-dashboard
+icon: mdi:tablet-dashboard
 type: sections
 max_columns: 3
 
@@ -19,4 +19,5 @@ sections:
             - font-size: 32px
             - color: var(--contrast20)
 
-  - !include sections/lights_main.yaml
+  - !include sections/lights.yaml
+  - !include sections/media.yaml

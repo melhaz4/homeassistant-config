@@ -270,13 +270,8 @@ sections:
         scrolling_effect: false
         button_type: name
 
-  - type: grid
-    cards:
-      - type: custom:bubble-card
-        card_type: separator
-        name: Climate
-        icon: mdi:home-thermometer
-        card_layout: large
+  # CLIMATE
+  - !include sections/climate_header.yaml
 
   # POPUP CLIMATE
   - !include sections/popups_climate1.yaml

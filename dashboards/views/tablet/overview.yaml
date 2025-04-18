@@ -8,7 +8,7 @@ sections:
   - type: grid
     cards:
       - type: custom:button-card
-        name: Hello, {{user}}!
+        name: Hello!
         styles:
           card:
             # - font-family: In case of a custom font, otherwise you can remove this line
@@ -18,10 +18,5 @@ sections:
           name:
             - font-size: 32px
             - color: var(--contrast20)
-      - type: custom:bubble-card
-        card_type: separator
-        name: Lights
-        icon: mdi:view-switch
-        card_layout: large
 
   - !include sections/lights_main.yaml

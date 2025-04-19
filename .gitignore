@@ -4,6 +4,7 @@
 *.db-wal
 .homekit/
 cloud/
+.cloud/
 tts/
 deps/
 __pycache__/

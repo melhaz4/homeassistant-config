@@ -8,22 +8,25 @@ sections:
   - type: grid
     cards:
       - type: custom:button-card
-        name: Hello!
-        styles:
-          card:
-            # - font-family: In case of a custom font, otherwise you can remove this line
-            - background: none
-            - padding: 16px 0
-            - '--mdc-ripple-press-opacity': 0
-          name:
-            - font-size: 32px
-            - color: var(--contrast20)
-      - type: custom:button-card
-        name: Hello!
+        name: >
+          [[[
+            const hour = new Date().getHours();
+            const name = user.name;
+            if (hour >= 18) {
+              return `Good Evening, ${name}!`;
+            } else if (hour >= 12) {
+              return `Good Afternoon, ${name}!`;
+            } else if (hour >= 5) {
+              return `Good Morning, ${name}!`;
+            } else {
+              return `Hello, ${name}!`;
+            }
+          ]]]
         custom_fields:
           badge:
             card:
               type: custom:button-card
+              name: '[[[return states["weather.forecast_home"].attributes.temperature]]]'
               show_label: false
               show_icon: false
               entity: weather.forecast_home

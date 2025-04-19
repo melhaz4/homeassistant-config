@@ -1,65 +1,42 @@
 type: grid
 columns: 1
 cards:
-  # - type: custom:bubble-card
-  #   card_type: separator
-  #   name: Car
-  #   icon: mdi:ev-plug-tesla
-  #   card_layout: large
   - type: custom:bubble-card
     card_type: empty-column
-  - type: horizontal-stack
-    cards:
-      - type: custom:bubble-card
-        card_type: button
+  - type: custom:mushroom-chips-card
+    chips:
+      - type: entity
         entity: device_tracker.panda_location_tracker
         icon: mdi:map-marker
-        show_name: false
-        show_state: true
-        scrolling_effect: true
-        sub_button: []
-      - type: custom:bubble-card
-        card_type: button
+      - type: entity
         entity: lock.panda_doors
-        icon: ''
-        show_name: false
-        show_state: true
-        scrolling_effect: true
-        sub_button: []
-      - type: custom:bubble-card
-        card_type: button
+      - type: entity
         entity: switch.panda_sentry_mode
-        icon: ''
-        show_name: false
-        show_state: true
-        scrolling_effect: true
-        sub_button: []
-  - type: horizontal-stack
-    cards:
-      - type: custom:bubble-card
-        card_type: button
+      - type: entity
         entity: binary_sensor.panda_charger
-        icon: ''
-        show_name: false
-        show_state: true
-        scrolling_effect: true
-        sub_button: []
-      - type: custom:bubble-card
-        card_type: button
+      - type: entity
         entity: sensor.panda_battery
-        icon: ''
-        show_name: false
-        show_state: true
-        scrolling_effect: true
-        sub_button: []
-      - type: custom:mushroom-update-card
+      - type: entity
         entity: update.panda_software_update
-        primary_info: state
-        secondary_info: none
-        show_buttons_control: false
+        icon: mdi:download
+    alignment: center
+  - type: picture
+    image: /api/image/serve/d80c5ef9b0835c50fd1c121f63eb435d/512x512
+    grid_options:
+      columns: 12
+      rows: 4
+    card_mod:
+      style: |
+        ha-card {
+          background: transparent !important;
+          box-shadow: none !important;
+        }
   - type: map
     entities:
       - entity: device_tracker.panda_location_tracker
+    grid_options:
+      columns: full
+      rows: 2
     theme_mode: dark
   - type: horizontal-stack
     cards:

@@ -272,7 +272,7 @@ cards:
     cards:
       # OFFICE LAMP
       - type: custom:button-card
-        name: Tall Lamp
+        name: Office Lamp
         icon: mdi:desk-lamp
         entity: switch.office_lamp
         tap_action:

@@ -1,9 +1,10 @@
 title: Home
 path: overview
 icon: mdi:tablet-dashboard
+theme: Rounded
+kiosk_mode: true
 type: sections
 max_columns: 3
-kiosk_mode: true
 
 sections:
   - type: grid

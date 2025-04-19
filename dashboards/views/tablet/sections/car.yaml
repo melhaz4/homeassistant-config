@@ -8,21 +8,51 @@ cards:
   #   card_layout: large
   - type: custom:bubble-card
     card_type: empty-column
-  - type: custom:mushroom-chips-card
-    chips:
-      - type: entity
+  - type: horizontal-stack
+    cards:
+      - type: custom:bubble-card
+        card_type: button
         entity: device_tracker.panda_location_tracker
-        icon: mdi:map-marker-radius
-      - type: entity
+        icon: mdi:map-marker
+        show_name: false
+        show_state: true
+        scrolling_effect: false
+        sub_button: []
+      - type: custom:bubble-card
+        card_type: button
         entity: lock.panda_doors
-      - type: entity
+        icon: ''
+        show_name: false
+        show_state: true
+        scrolling_effect: false
+        sub_button: []
+      - type: custom:bubble-card
+        card_type: button
         entity: switch.panda_sentry_mode
-      - type: entity
+        icon: ''
+        show_name: false
+        show_state: true
+        scrolling_effect: false
+        sub_button: []
+  - type: horizontal-stack
+    cards:
+      - type: custom:bubble-card
+        card_type: button
         entity: binary_sensor.panda_charger
-      - type: entity
+        icon: ''
+        show_name: false
+        show_state: true
+        scrolling_effect: false
+        sub_button: []
+      - type: custom:bubble-card
+        card_type: button
         entity: sensor.panda_battery
-    grid_options:
-      columns: full
+        icon: ''
+        show_name: false
+        show_state: true
+        scrolling_effect: false
+        sub_button: []
+      - type: custom:mushroom-empty-card
   - type: map
     entities:
       - entity: device_tracker.panda_location_tracker

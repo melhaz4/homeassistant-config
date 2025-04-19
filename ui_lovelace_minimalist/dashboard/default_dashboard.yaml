@@ -1,0 +1,88 @@
+title: Melz Home
+kiosk_mode: true
+visible: true
+views:
+  - title: h o m e
+    path: overview
+    visible: true
+    icon: mdi:tablet-dashboard
+    theme: Rounded
+    type: sections
+    max_columns: 2
+
+    sections:
+      - type: grid
+        cards:
+          - type: custom:mushroom-chips-card
+            chips:
+              - type: menu
+            alignment: end
+          - type: custom:button-card
+            name: >
+              [[[
+                const hour = new Date().getHours();
+                const name = user.name;
+                if (hour >= 18) {
+                  return `Good Evening, ${name}!`;
+                } else if (hour >= 12) {
+                  return `Good Afternoon, ${name}!`;
+                } else if (hour >= 5) {
+                  return `Good Morning, ${name}!`;
+                } else {
+                  return `Hello, ${name}!`;
+                }
+              ]]]
+            custom_fields:
+              badge:
+                card:
+                  type: custom:button-card
+                  name: '[[[ return states["weather.forecast_home"].attributes.temperature + "°F"; ]]]'
+                  show_label: false
+                  show_icon: false
+                  entity: weather.forecast_home
+                  tap_action:
+                    action: more-info
+                    haptic: medium
+                  styles:
+                    grid:
+                      - grid-template-areas: '"n gutter l"'
+                      - grid-template-columns: min-content 5px min-content
+                      - grid-template-rows: min-content
+                    card:
+                      - padding: 6px 10px
+                      - font-size: 12px
+                      - line-height: 18px
+                      - font-weight: 500
+                      - background: var(--contrast20)
+                    name:
+                      - color: var(--contrast1)
+                    label:
+                      - color: var(--contrast12)
+            styles:
+              grid:
+                - grid-template-areas: '"n" "badge"'
+              card:
+                - background: none
+                - padding: 16px 0
+                - '--mdc-ripple-press-opacity': 0
+              name:
+                - font-size: 32px
+                - color: var(--contrast20)
+              custom_fields:
+                badge:
+                  - margin: 16px auto 0 auto
+                  - '--mdc-ripple-press-opacity': 0.5
+          # - type: custom:bubble-card
+          #   card_type: empty-column
+          # - show_current: true
+          #   show_forecast: false
+          #   type: weather-forecast
+          #   entity: weather.forecast_home
+          #   forecast_type: hourly
+          #   theme: Rounded
+
+      - !include views/scenes.yaml
+      - !include views/climate.yaml
+      - !include views/lights.yaml
+      # - !include views/media.yaml
+      - !include views/car.yaml

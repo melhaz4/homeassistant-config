@@ -60,9 +60,9 @@ lovelace:
     - url: /hacsfiles/mini-climate-card/mini-climate-card-bundle.js
       type: module
   dashboards:
-    tablet-dashboard:
+    default-dashboard:
       mode: yaml
-      title: h o m e
+      title: Melz House
       icon: mdi:tablet-dashboard
       show_in_sidebar: true
-      filename: ui_lovelace_minimalist/dashboard/ui-lovelace.yaml
+      filename: ui_lovelace_minimalist/dashboard/default_dashboard.yaml

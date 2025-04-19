@@ -1,6 +1,0 @@
-title: h o m e
-kiosk_mode: true
-visible: true
-views:
-  - !include views/tablet/overview.yaml
-  

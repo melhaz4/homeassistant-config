@@ -1,5 +1,6 @@
 title: Overview
 path: overview
+visible: true
 icon: mdi:view-dashboard
 type: sections
 max_columns: 1

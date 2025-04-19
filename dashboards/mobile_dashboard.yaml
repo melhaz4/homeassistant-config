@@ -1,4 +1,6 @@
 title: Mobile Dashboard
+kiosk_mode: true
+visible: true
 views:
   - !include views/mobile/overview.yaml
   

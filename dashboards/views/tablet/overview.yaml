@@ -6,7 +6,7 @@ theme: Rounded
 kiosk_mode: true
 cast_path: "/lovelace-cast/overview"
 type: sections
-max_columns: 3
+max_columns: 2
 
 sections:
   - type: grid

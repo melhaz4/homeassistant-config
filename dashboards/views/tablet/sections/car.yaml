@@ -16,7 +16,7 @@ cards:
         icon: mdi:map-marker
         show_name: false
         show_state: true
-        scrolling_effect: false
+        scrolling_effect: true
         sub_button: []
       - type: custom:bubble-card
         card_type: button
@@ -24,7 +24,7 @@ cards:
         icon: ''
         show_name: false
         show_state: true
-        scrolling_effect: false
+        scrolling_effect: true
         sub_button: []
       - type: custom:bubble-card
         card_type: button
@@ -32,7 +32,7 @@ cards:
         icon: ''
         show_name: false
         show_state: true
-        scrolling_effect: false
+        scrolling_effect: true
         sub_button: []
   - type: horizontal-stack
     cards:
@@ -42,7 +42,7 @@ cards:
         icon: ''
         show_name: false
         show_state: true
-        scrolling_effect: false
+        scrolling_effect: true
         sub_button: []
       - type: custom:bubble-card
         card_type: button
@@ -50,9 +50,13 @@ cards:
         icon: ''
         show_name: false
         show_state: true
-        scrolling_effect: false
+        scrolling_effect: true
         sub_button: []
-      - type: custom:mushroom-empty-card
+      - type: custom:mushroom-update-card
+        entity: update.panda_software_update
+        primary_info: state
+        secondary_info: none
+        show_buttons_control: false
   - type: map
     entities:
       - entity: device_tracker.panda_location_tracker

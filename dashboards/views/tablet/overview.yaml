@@ -26,7 +26,7 @@ sections:
           badge:
             card:
               type: custom:button-card
-              name: '[[[return states["weather.forecast_home"].attributes.temperature]]]°F'
+              name: '[[[ return states["weather.forecast_home"].attributes.temperature + "°F"; ]]]'
               show_label: false
               show_icon: false
               entity: weather.forecast_home

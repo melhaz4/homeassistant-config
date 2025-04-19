@@ -55,6 +55,8 @@ lovelace:
       type: module
     - url: /hacsfiles/swipe-card/swipe-card.js
       type: module
+    - url: /hacsfiles/lovelace-horizon-card/lovelace-horizon-card.js
+      type: module
     - url: /hacsfiles/mini-climate-card/mini-climate-card-bundle.js
       type: module
   dashboards:
@@ -66,7 +68,7 @@ lovelace:
       filename: dashboards/mobile_dashboard.yaml
     tablet-dashboard:
       mode: yaml
-      title: Overview
+      title: Home
       icon: mdi:tablet-dashboard
       show_in_sidebar: true
       filename: dashboards/tablet_dashboard.yaml

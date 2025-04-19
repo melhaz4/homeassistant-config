@@ -3,6 +3,16 @@ columns: 1
 cards:
   - type: custom:bubble-card
     card_type: empty-column
+  - type: custom:bubble-card
+    card_type: separator
+    name: Car
+    icon: mdi:ev-plug-tesla
+    card_layout: large
+    styles: |
+      .bubble-line {
+        background: var(--purple);
+        opacity: 0.1;
+      }
   - type: custom:mushroom-chips-card
     chips:
       - type: entity
@@ -20,17 +30,17 @@ cards:
         entity: update.panda_software_update
         icon: mdi:download
     alignment: center
-  - type: picture
-    image: /api/image/serve/d80c5ef9b0835c50fd1c121f63eb435d/512x512
-    grid_options:
-      columns: 12
-      rows: 4
-    card_mod:
-      style: |
-        ha-card {
-          background: transparent !important;
-          box-shadow: none !important;
-        }
+  # - type: picture
+  #   image: /api/image/serve/d80c5ef9b0835c50fd1c121f63eb435d/512x512
+  #   grid_options:
+  #     columns: 12
+  #     rows: 4
+  #   card_mod:
+  #     style: |
+  #       ha-card {
+  #         background: transparent !important;
+  #         box-shadow: none !important;
+  #       }
   - type: map
     entities:
       - entity: device_tracker.panda_location_tracker

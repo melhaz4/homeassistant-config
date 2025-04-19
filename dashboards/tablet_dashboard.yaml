@@ -1,4 +1,4 @@
-title: Tablet Dashboard
+title: Home
 kiosk_mode: true
 views:
   - !include views/tablet/overview.yaml

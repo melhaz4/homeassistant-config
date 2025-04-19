@@ -11,24 +11,36 @@ cards:
     styles: |
       .bubble-line {
         background: var(--purple);
-        opacity: 0.1;
+        opacity: 0.5;
       }
-  - type: custom:mushroom-chips-card
-    chips:
-      - type: entity
-        entity: device_tracker.panda_location_tracker
-        icon: mdi:map-marker
-      - type: entity
-        entity: lock.panda_doors
-      - type: entity
-        entity: switch.panda_sentry_mode
-      - type: entity
-        entity: binary_sensor.panda_charger
-      - type: entity
-        entity: sensor.panda_battery
-      - type: entity
-        entity: update.panda_software_update
-        icon: mdi:download
+  - type: custom:bubble-card
+    card_type: button
+    button_type: name
+    entity: device_tracker.panda_location_tracker
+    scrolling_effect: false
+    show_state: true
+    show_name: false
+    sub_button:
+      - entity: lock.panda_doors
+        show_name: false
+        show_state: true
+        state_background: false
+        show_background: false
+      - entity: switch.panda_sentry_mode
+        show_background: false
+        show_state: true
+      - entity: binary_sensor.panda_charger
+        show_background: false
+        show_state: true
+      - entity: sensor.panda_battery
+        state_background: true
+        show_icon: true
+        show_background: false
+        show_state: true
+      - entity: update.panda_software_update
+        show_background: false
+        show_state: true
+        icon: ''
     alignment: center
   # - type: picture
   #   image: /api/image/serve/d80c5ef9b0835c50fd1c121f63eb435d/512x512

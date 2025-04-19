@@ -1,4 +1,5 @@
 title: Tablet Dashboard
+kiosk_mode: true
 views:
   - !include views/tablet/overview.yaml
   

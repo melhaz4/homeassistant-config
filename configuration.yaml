@@ -60,15 +60,9 @@ lovelace:
     - url: /hacsfiles/mini-climate-card/mini-climate-card-bundle.js
       type: module
   dashboards:
-    mobile-dashboard:
-      mode: yaml
-      title: Mobile Dashboard
-      icon: mdi:cellphone
-      show_in_sidebar: false
-      filename: dashboards/mobile_dashboard.yaml
     tablet-dashboard:
       mode: yaml
       title: h o m e
       icon: mdi:tablet-dashboard
       show_in_sidebar: true
-      filename: ui_lovelace_minimalist/dashboards/tablet_dashboard.yaml
+      filename: ui_lovelace_minimalist/dashboard/ui-lovelace.yaml

@@ -68,6 +68,6 @@ cards:
         styles:
           card:
             - border-radius: 24px
-            - background-color: var(--contrast10)
+            - background-color: var(--purple)
           icon:
             - color: var(--black)

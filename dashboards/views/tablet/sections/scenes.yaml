@@ -6,6 +6,8 @@ cards:
   #   name: Scenes
   #   icon: mdi:sun-angle
   #   card_layout: large
+  - type: custom:bubble-card
+    card_type: empty-column
   - type: grid
     columns: 4
     cards:

@@ -6,6 +6,8 @@ cards:
   #   name: Lights
   #   icon: mdi:light-switch
   #   card_layout: large
+  - type: custom:bubble-card
+    card_type: empty-column
   - type: horizontal-stack
     cards:
       #SHAPES

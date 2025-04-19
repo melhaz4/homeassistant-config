@@ -6,6 +6,8 @@ cards:
   #   name: Car
   #   icon: mdi:ev-plug-tesla
   #   card_layout: large
+  - type: custom:bubble-card
+    card_type: empty-column
   - type: custom:mushroom-chips-card
     chips:
       - type: entity

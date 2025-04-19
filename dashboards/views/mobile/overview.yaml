@@ -5,6 +5,10 @@ type: sections
 max_columns: 1
 sections:
   # TITLE AND CHIPS
+  - type: custom:mushroom-chips-card
+    chips:
+      - type: menu
+    alignment: end
   - type: grid
     cards:
       - type: custom:mushroom-title-card

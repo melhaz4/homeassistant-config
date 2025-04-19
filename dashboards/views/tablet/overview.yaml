@@ -3,10 +3,15 @@ path: overview
 icon: mdi:tablet-dashboard
 type: sections
 max_columns: 3
+kiosk_mode: true
 
 sections:
   - type: grid
     cards:
+      - type: custom:mushroom-chips-card
+        chips:
+          - type: menu
+        alignment: end
       - type: custom:button-card
         name: >
           [[[

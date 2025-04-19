@@ -32,10 +32,10 @@ cards:
         show_icon: true
         show_background: false
         show_state: true
-      - entity: update.panda_software_update
-        show_background: false
-        show_state: true
-        icon: ''
+      # - entity: update.panda_software_update
+      #   show_background: false
+      #   show_state: true
+      #   icon: ''
   # - type: picture
   #   image: /api/image/serve/d80c5ef9b0835c50fd1c121f63eb435d/512x512
   #   grid_options:

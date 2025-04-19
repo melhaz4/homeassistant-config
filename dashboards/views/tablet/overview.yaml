@@ -1,8 +1,10 @@
 title: Home
 path: overview
+visible: true
 icon: mdi:tablet-dashboard
 theme: Rounded
 kiosk_mode: true
+cast_path: "/lovelace-cast/overview"
 type: sections
 max_columns: 3
 

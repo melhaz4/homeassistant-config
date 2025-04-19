@@ -9,16 +9,6 @@ max_columns: 2
 sections:
   - type: grid
     cards:
-      - type: custom:button-card
-        name: Cast to Nest Hub
-        icon: mdi:cast
-        tap_action:
-          action: call-service
-          service: cast.show_lovelace_view
-          data:
-            entity_id: media_player.nesthubf85f
-            dashboard_path: tablet-dashboard
-            view_path: tablet
       - type: custom:mushroom-chips-card
         chips:
           - type: menu

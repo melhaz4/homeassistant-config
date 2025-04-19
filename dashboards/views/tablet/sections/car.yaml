@@ -8,11 +8,6 @@ cards:
     name: Car
     icon: mdi:ev-plug-tesla
     card_layout: large
-    styles: |
-      .bubble-line {
-        background: var(--purple);
-        opacity: 0.5;
-      }
   - type: custom:bubble-card
     card_type: button
     button_type: name
@@ -41,7 +36,6 @@ cards:
         show_background: false
         show_state: true
         icon: ''
-    alignment: center
   # - type: picture
   #   image: /api/image/serve/d80c5ef9b0835c50fd1c121f63eb435d/512x512
   #   grid_options:

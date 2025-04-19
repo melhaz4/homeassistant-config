@@ -4,6 +4,11 @@ cards:
   - type: custom:bubble-card
     card_type: empty-column
   - type: custom:bubble-card
+    card_type: separator
+    name: Climate
+    icon: mdi:home-thermometer
+    card_layout: large
+  - type: custom:bubble-card
     card_type: climate
     entity: climate.1st_floor_hvac
     sub_button:

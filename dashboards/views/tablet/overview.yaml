@@ -1,4 +1,4 @@
-title: Overview
+title: Home
 path: overview
 icon: mdi:tablet-dashboard
 type: sections
@@ -30,5 +30,5 @@ sections:
   - !include sections/scenes.yaml
   - !include sections/climate.yaml
   - !include sections/lights.yaml
-  - !include sections/media.yaml
+  # - !include sections/media.yaml
   - !include sections/car.yaml

@@ -8,7 +8,7 @@ tts/
 deps/
 __pycache__/
 .storage/
-*.log
+*.log.*
 secrets.yaml  # If you're not using encrypted secrets
 .vscode/
 backups/

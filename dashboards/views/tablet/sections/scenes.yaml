@@ -1,11 +1,11 @@
 type: grid
 columns: 1
 cards:
-  - type: custom:bubble-card
-    card_type: separator
-    name: Scenes
-    icon: mdi:sun-angle
-    card_layout: large
+  # - type: custom:bubble-card
+  #   card_type: separator
+  #   name: Scenes
+  #   icon: mdi:sun-angle
+  #   card_layout: large
   - type: grid
     columns: 4
     cards:
@@ -21,7 +21,7 @@ cards:
         styles:
           card:
             - border-radius: 24px
-            - background-color: var(--blue)
+            - background-color: var(--yellow)
           icon:
             - color: var(--black)
       - type: custom:button-card
@@ -36,6 +36,6 @@ cards:
         styles:
           card:
             - border-radius: 24px
-            - background-color: var(--yellow)
+            - background-color: var(--blue)
           icon:
             - color: var(--black)

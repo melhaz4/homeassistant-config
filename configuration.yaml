@@ -60,11 +60,11 @@ lovelace:
       mode: yaml
       title: Mobile Dashboard
       icon: mdi:cellphone
-      show_in_sidebar: true
+      show_in_sidebar: false
       filename: dashboards/mobile_dashboard.yaml
     tablet-dashboard:
       mode: yaml
-      title: Tablet Dashboard
+      title: Overview
       icon: mdi:tablet-dashboard
       show_in_sidebar: true
       filename: dashboards/tablet_dashboard.yaml

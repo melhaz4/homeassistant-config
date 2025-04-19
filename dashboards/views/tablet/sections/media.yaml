@@ -1,11 +1,11 @@
 type: grid
 columns: 1
 cards:
-  - type: custom:bubble-card
-    card_type: separator
-    name: Media
-    icon: mdi:television
-    card_layout: large
+  # - type: custom:bubble-card
+  #   card_type: separator
+  #   name: Media
+  #   icon: mdi:television
+  #   card_layout: large
   - type: grid
     columns: 1
     cards:

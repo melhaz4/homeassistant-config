@@ -37,7 +37,6 @@ cards:
     grid_options:
       columns: full
       rows: 2
-    theme_mode: dark
   - type: horizontal-stack
     cards:
       - type: custom:bubble-card

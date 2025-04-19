@@ -55,6 +55,8 @@ lovelace:
       type: module
     - url: /hacsfiles/swipe-card/swipe-card.js
       type: module
+    - url: /hacsfiles/mini-climate-card/mini-climate-card-bundle.js
+      type: module
   dashboards:
     mobile-dashboard:
       mode: yaml

@@ -68,7 +68,7 @@ lovelace:
       filename: dashboards/mobile_dashboard.yaml
     tablet-dashboard:
       mode: yaml
-      title: Home
+      title: h o m e
       icon: mdi:tablet-dashboard
       show_in_sidebar: true
-      filename: dashboards/tablet_dashboard.yaml
+      filename: ui_lovelace_minimalist/dashboards/tablet_dashboard.yaml

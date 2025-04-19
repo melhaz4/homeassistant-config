@@ -1,0 +1,87 @@
+type: grid
+columns: 1
+cards:
+  - type: custom:bubble-card
+    card_type: empty-column
+  - type: custom:bubble-card
+    card_type: separator
+    name: Car
+    icon: mdi:ev-plug-tesla
+    card_layout: large
+  - type: custom:bubble-card
+    card_type: button
+    button_type: name
+    entity: device_tracker.panda_location_tracker
+    scrolling_effect: false
+    show_state: true
+    show_name: false
+    sub_button:
+      - entity: lock.panda_doors
+        show_name: false
+        show_state: true
+        state_background: false
+        show_background: false
+      - entity: switch.panda_sentry_mode
+        show_background: false
+        show_state: true
+      - entity: binary_sensor.panda_charger
+        show_background: false
+        show_state: true
+      - entity: sensor.panda_battery
+        state_background: true
+        show_icon: true
+        show_background: false
+        show_state: true
+      # - entity: update.panda_software_update
+      #   show_background: false
+      #   show_state: true
+      #   icon: ''
+  # - type: picture
+  #   image: /api/image/serve/d80c5ef9b0835c50fd1c121f63eb435d/512x512
+  #   grid_options:
+  #     columns: 12
+  #     rows: 4
+  #   card_mod:
+  #     style: |
+  #       ha-card {
+  #         background: transparent !important;
+  #         box-shadow: none !important;
+  #       }
+  - type: map
+    entities:
+      - entity: device_tracker.panda_location_tracker
+    grid_options:
+      columns: full
+      rows: 2
+  - type: horizontal-stack
+    cards:
+      - type: custom:bubble-card
+        card_type: button
+        button_type: state
+        entity: sensor.panda_tpms_front_left
+        icon: mdi:tire
+        scrolling_effect: false
+        name: Front Left
+      - type: custom:bubble-card
+        card_type: button
+        button_type: state
+        entity: sensor.panda_tpms_front_right
+        icon: mdi:tire
+        scrolling_effect: false
+        name: Front Right
+  - type: horizontal-stack
+    cards:
+      - type: custom:bubble-card
+        card_type: button
+        button_type: state
+        entity: sensor.panda_tpms_rear_left
+        icon: mdi:tire
+        scrolling_effect: false
+        name: Back Left
+      - type: custom:bubble-card
+        card_type: button
+        button_type: state
+        entity: sensor.panda_tpms_rear_right
+        icon: mdi:tire
+        scrolling_effect: false
+        name: Back Right

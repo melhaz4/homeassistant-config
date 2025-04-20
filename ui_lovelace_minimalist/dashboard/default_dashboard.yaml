@@ -1,4 +1,4 @@
-title: Melz Home
+title: s t e e l y a r d c o u r t
 kiosk_mode: true
 visible: true
 views:
@@ -72,17 +72,8 @@ views:
                 badge:
                   - margin: 16px auto 0 auto
                   - '--mdc-ripple-press-opacity': 0.5
-          # - type: custom:bubble-card
-          #   card_type: empty-column
-          # - show_current: true
-          #   show_forecast: false
-          #   type: weather-forecast
-          #   entity: weather.forecast_home
-          #   forecast_type: hourly
-          #   theme: Rounded
 
       - !include views/scenes.yaml
       - !include views/climate.yaml
       - !include views/lights.yaml
-      # - !include views/media.yaml
-      - !include views/car.yaml
+      # - !include views/car.yaml

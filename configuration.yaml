@@ -13,8 +13,8 @@ scene: !include scenes.yaml
 shell_command:
   update_and_restart_ha: "/bin/bash /home/melanie/homeassistant/config/scripts/update_and_restart.sh"
 
-template:
-  - sensor: !include area_device_count_sensors.yaml
+# template:
+#   - sensor: !include area_device_count_sensors.yaml
 
 lovelace:
   mode: yaml
@@ -62,7 +62,7 @@ lovelace:
   dashboards:
     default-dashboard:
       mode: yaml
-      title: Melz House
+      title: Houzz
       icon: mdi:tablet-dashboard
       show_in_sidebar: true
       filename: ui_lovelace_minimalist/dashboard/default_dashboard.yaml

@@ -1,6 +1,69 @@
 - alias: Webhook - Pull Git Repo and Restart Home Assistant
   trigger:
-    - platform: webhook
-      webhook_id: update_homeassistant
+  - platform: webhook
+    webhook_id: update_homeassistant
   action:
-    - service: shell_command.update_and_restart_ha
+  - service: shell_command.update_and_restart_ha
+  id: 6e83e9351f4b4ad1af433c116284e228
+- id: '1745105198717'
+  alias: Turn off Lights & TV
+  description: ''
+  triggers:
+  - trigger: time
+    at: 01:00:00
+  conditions: []
+  actions:
+  - type: turn_off
+    device_id: e3de4a68bd86001a4aa107223911231a
+    entity_id: 0ebce39fb6dcb7ae5435dabfef3ffef0
+    domain: switch
+  - type: turn_off
+    device_id: beff7c2d29189e269f33e158c4dc03f0
+    entity_id: 10e46e4d7a06482c876b242835ff49f2
+    domain: light
+  - type: turn_off
+    device_id: ff9cda235805f59f11b2ec0acaf73b0f
+    entity_id: 06bbedc72c87b101b7d066ff6a980c35
+    domain: switch
+  - type: turn_off
+    device_id: 52f82fabbdb5469e6f5740a0cb62ad90
+    entity_id: ecf9e690eb110519ee5cb7cc0bbc696f
+    domain: remote
+  mode: single
+- id: '1745105351107'
+  alias: Sunset
+  description: ''
+  triggers:
+  - trigger: sun
+    event: sunset
+    offset: 0
+  conditions: []
+  actions:
+  - type: turn_on
+    device_id: cb9a706d2384821af3a824889cea297c
+    entity_id: 5a7e9ede2a5c29a168cb3d01dea1c146
+    domain: light
+    brightness_pct: 100
+  - type: turn_on
+    device_id: beff7c2d29189e269f33e158c4dc03f0
+    entity_id: 10e46e4d7a06482c876b242835ff49f2
+    domain: light
+    brightness_pct: 100
+  mode: single
+- id: '1745105444867'
+  alias: Wind Down
+  description: ''
+  triggers:
+  - trigger: time
+    at: '22:00:00'
+  conditions: []
+  actions:
+  - type: turn_off
+    device_id: cb9a706d2384821af3a824889cea297c
+    entity_id: 5a7e9ede2a5c29a168cb3d01dea1c146
+    domain: light
+  - type: turn_off
+    device_id: beff7c2d29189e269f33e158c4dc03f0
+    entity_id: 10e46e4d7a06482c876b242835ff49f2
+    domain: light
+  mode: single

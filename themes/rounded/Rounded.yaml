@@ -231,7 +231,7 @@ Rounded:
       }
       .header {
         top: auto !important;
-        bottom: 0;
+        top: 0; 
         background-color: rgba(var(--contrast1-RGB),0.6) !important;
       }
       :host([scrolled]) .header {

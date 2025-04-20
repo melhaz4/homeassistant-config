@@ -64,5 +64,5 @@ lovelace:
       mode: yaml
       title: Houzz
       icon: mdi:tablet-dashboard
-      show_in_sidebar: true
+      show_in_sidebar: false
       filename: ui_lovelace_minimalist/dashboard/default_dashboard.yaml
